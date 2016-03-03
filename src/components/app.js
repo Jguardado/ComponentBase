@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import Hello from './hellopage';
 
 export default class App extends Component {
 
-
   render() {
-    console.log('app Component being called');
-    return <div>Inside of App</div>;
+    console.log('App Component being called');
+    return (
+      <div>
+        <Hello/>
+      </div>
+    );
   }
 }
