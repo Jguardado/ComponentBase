@@ -1,0 +1,15 @@
+.container {
+  border-style: dashed;
+  border-color: green;
+  position: absolute;
+}
+
+.exampleHideShow {
+  width: auto;
+  background-color: blue;
+}
+
+.exampleHideShow2 {
+  width: auto;
+  background-color: red;
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Hello extends Component {
+export default class HideShow extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,14 +22,18 @@ export default class Hello extends Component {
   render() {
     if (this.state.visible) {
       return (
-        <div>
+        <div className='exampleHideShow'>
           <h1 onClick={ this.hide.bind(this)}>Peek-a-Boo</h1>
         </div>
       );
     }
 
     if (!this.state.visible) {
-      return <h4 onClick={ this.show.bind(this)}>Click Here</h4>;
+      return (
+        <div className='exampleHideShow2'>
+          <h4 onClick={ this.show.bind(this)}>Click Here</h4>;
+        </div>
+      );
     }
   }
 }
