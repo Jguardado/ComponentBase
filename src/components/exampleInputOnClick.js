@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class InputForm extends Component {
+export default class InputOnClick extends Component {
   constructor(props) {
     super(props);
 
@@ -22,11 +22,11 @@ export default class InputForm extends Component {
     return (
       <div>
         <div>
-          <input type='text'
+          <input type='text' value={this.state.value}></input>
+          <form
           placeholder='type somethin'
-          value={ this.state.value }
-          onChange={ this.handleInputChange.bind(this) }
-          ></input>
+          onSubmit={ this.handleInputChange.bind(this) }
+          ><button>Submit</button></form>
         </div>
       </div>
     );

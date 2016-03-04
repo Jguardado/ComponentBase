@@ -3,6 +3,7 @@ import HideShow from './exampleHideShow';
 import Contructor from './constructorFunc';
 import Button from './exampleButton';
 import InputForm from './exampleInputForm';
+import InputOnClick from './exampleInputOnClick';
 
 export default class App extends Component {
 
@@ -14,6 +15,7 @@ export default class App extends Component {
         <Contructor />
         <Button />
         <InputForm />
+        <InputOnClick />
       </div>
     );
   }
