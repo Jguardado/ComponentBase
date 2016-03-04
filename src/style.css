@@ -1,3 +1,6 @@
+/*
+COMPONENTS
+*/
 .container {
   border-style: dashed;
   border-color: green;
@@ -12,4 +15,8 @@
 .exampleHideShow2 {
   width: auto;
   background-color: red;
+}
+
+.constructor {
+  color: Purple;
 }
