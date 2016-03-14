@@ -4,6 +4,7 @@ import Contructor from './constructorFunc';
 import Button from './exampleButton';
 import InputForm from './exampleInputForm';
 import InputOnClick from './exampleInputOnClick';
+import Textbox from './exampleTextbox';
 
 export default class App extends Component {
 
@@ -16,6 +17,7 @@ export default class App extends Component {
         <Button />
         <InputForm />
         <InputOnClick />
+        <Textbox />
       </div>
     );
   }
