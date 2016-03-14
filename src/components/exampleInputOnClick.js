@@ -28,7 +28,7 @@ export default class InputOnClick extends Component {
   }
 
   render() {
-    console.log('render being called', this.state);
+  
     return (
         <form onSubmit={ this.handleInputSubmit.bind(this) }>
           <div>

@@ -5,6 +5,7 @@ import Button from './exampleButton';
 import InputForm from './exampleInputForm';
 import InputOnClick from './exampleInputOnClick';
 import Textbox from './exampleTextbox';
+import SliderBar from './exampleSliderbar';
 
 export default class App extends Component {
 
@@ -18,6 +19,7 @@ export default class App extends Component {
         <InputForm />
         <InputOnClick />
         <Textbox />
+        <SliderBar />
       </div>
     );
   }

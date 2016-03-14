@@ -29,7 +29,7 @@ export default class Textbox extends Component {
   }
 
   render() {
-    console.log('this is the the state:', this.state);
+
     return (
     <form
       onSubmit={this.handleSubmit.bind(this)}>
