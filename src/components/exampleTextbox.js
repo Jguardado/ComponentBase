@@ -22,7 +22,7 @@ export default class Textbox extends Component {
 
     //this stores the submited text for one cycle. (value > comment> value > comment)
     //which means in order to presist this data it must be sent to the database.
-    //setState is a async function and so the value must be reset only when the comment section has been populated
+    //setState is async so the value must be reset only when the comment section has been populated
 
     this.setState({ comment: this.state.value }, function () { this.setState({ value: '' });});
 
@@ -34,6 +34,7 @@ export default class Textbox extends Component {
     <form
       onSubmit={this.handleSubmit.bind(this)}>
       <div>
+      <h4>EXAMPLE TEXT/COMMENT BOX</h4>
         <label>You title/description here</label>
         <textarea
         value={ this.state.value }

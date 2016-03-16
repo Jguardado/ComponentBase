@@ -10,6 +10,12 @@ export default class Contructor extends Component {
   }
 
   render() {
-    return <div className="constructor">{this.state.test}</div>;
+
+    return (
+      <div className="constructor">
+      <h4>EXAMPLE CONSTRUCTOR</h4>
+      {this.state.test}
+      </div>
+    );
   }
 }

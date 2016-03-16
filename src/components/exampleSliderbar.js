@@ -15,11 +15,11 @@ export default class SliderBar extends Component {
     this.setState({ value: event.target.value });
   }
 
-
   //TODO: Research needed. Receiving error about input children
   render() {
     return (
       <div>
+      <h4>EXAMPLE SLIDER BAR</h4>
         <div className="barSlider">
           <input type="range" min='0'
             max='10'

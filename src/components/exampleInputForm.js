@@ -21,6 +21,7 @@ export default class InputForm extends Component {
 
     return (
       <div>
+      <h4>EXAMPLE INPUT FORM</h4>
         <div>
           <input type='text'
           placeholder='type somethin'

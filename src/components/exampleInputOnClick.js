@@ -28,10 +28,11 @@ export default class InputOnClick extends Component {
   }
 
   render() {
-  
+
     return (
         <form onSubmit={ this.handleInputSubmit.bind(this) }>
           <div>
+          <h4>EXAMPLE INPUT WITH SUBMIT BUTTON</h4>
             <input
             type='text'
             value= {this.state.value}
