@@ -1,22 +1,22 @@
 /*
 COMPONENTS
 */
-.container {
+/*.container {
   border-style: dashed;
   border-color: green;
   position: absolute;
-}
+}*/
 
 .exampleHideShow {
-  width: auto;
+  width: fit-content;
   background-color: blue;
 }
 
 .exampleHideShow2 {
-  width: auto;
+  width: fit-content;
   background-color: red;
 }
 
-.constructor {
-  color: Purple;
+.blocked {
+  display: block;
 }

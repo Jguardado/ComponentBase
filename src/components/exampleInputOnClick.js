@@ -30,17 +30,20 @@ export default class InputOnClick extends Component {
   render() {
 
     return (
-        <form onSubmit={ this.handleInputSubmit.bind(this) }>
-          <div>
-          <h4>EXAMPLE INPUT WITH SUBMIT BUTTON</h4>
+        <form>
+          <fieldset>
+          <legend>EXAMPLE INPUT WITH SUBMIT BUTTON</legend>
             <input
             type='text'
             value= {this.state.value}
             onChange={this.handleInputChange.bind(this)}
             placeholder='type somethin special'
             ></input>
-            <input type='submit' value='click'></input>
-          </div>
+            <button
+            className='btn'
+            onClick={ this.handleInputSubmit.bind(this) }
+            >Click</button>
+          </fieldset>
         </form>
     );
 

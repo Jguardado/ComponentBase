@@ -15,7 +15,7 @@ export default class App extends Component {
     return (
 
       <div className='container'>
-      <h1>EXAMPLE OF USEFUL FUNCTIONS</h1>
+      <h1 className='page-header'>EXAMPLE OF USEFUL FUNCTIONS</h1>
         <HideShow/>
         <Contructor />
         <Buttons />

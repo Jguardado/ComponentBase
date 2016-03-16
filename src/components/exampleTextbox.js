@@ -26,26 +26,30 @@ export default class Textbox extends Component {
 
     this.setState({ comment: this.state.value }, function () { this.setState({ value: '' });});
 
+    console.log('this is being called', this.state);
   }
+
+  // onSubmit={this.handleSubmit.bind(this)}>
 
   render() {
 
     return (
-    <form
-      onSubmit={this.handleSubmit.bind(this)}>
-      <div>
-      <h4>EXAMPLE TEXT/COMMENT BOX</h4>
-        <label>You title/description here</label>
-        <textarea
+    <form>
+      <fieldset>
+      <legend>EXAMPLE TEXT/COMMENT BOX</legend>
+      <label>You title/description here</label>
+      <textarea
+        rows='5'
+        className='blocked'
         value={ this.state.value }
         placeholder="Whats Good..."
         onChange={this.handleChange.bind(this)} >
-        </textarea>
-
-      </div>
-      <div>
-        <input type="submit" value="Submit" />
-      </div>
+      </textarea>
+      <button
+      type="submit"
+      className='btn blocked'
+      onClick={this.handleSubmit.bind(this)}>Submit</button>
+      </fieldset>
     </form>
     );
   }
