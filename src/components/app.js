@@ -7,6 +7,7 @@ import InputOnClick from './exampleInputOnClick';
 import Textbox from './exampleTextbox';
 import SliderBar from './exampleSliderbar';
 import { Button } from 'react-bootstrap';
+import Picture from './exampleImg';
 
 export default class App extends Component {
 
@@ -14,7 +15,7 @@ export default class App extends Component {
     console.log('App Component being called');
     return (
 
-      <div className='container'>
+      <div className='container main'>
       <h1 className='page-header'>EXAMPLE OF USEFUL FUNCTIONS</h1>
         <HideShow/>
         <Contructor />
@@ -23,6 +24,7 @@ export default class App extends Component {
         <InputOnClick />
         <Textbox />
         <SliderBar />
+        <Picture />
       </div>
     );
   }

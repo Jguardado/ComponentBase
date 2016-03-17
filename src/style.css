@@ -6,7 +6,15 @@ COMPONENTS
   border-color: green;
   position: absolute;
 }*/
-
+body {
+  background-color: grey;
+}
+.main {
+  background-color: white;
+  border-radius: 7px;
+  margin-top: 10px;
+  margin-bottom: 200px;
+}
 .exampleHideShow {
   width: fit-content;
   background-color: blue;
@@ -19,4 +27,11 @@ COMPONENTS
 
 .blocked {
   display: block;
+}
+
+.picture {
+  width: 500px;
+  hieght: 500px;
+  border-radius: 5px;
+  border: solid 1px;
 }
