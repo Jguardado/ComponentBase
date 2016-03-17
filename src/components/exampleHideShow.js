@@ -25,7 +25,7 @@ export default class HideShow extends Component {
         <div>
         <legend>EXAMPLE HIDE/SHOW</legend>
         <div className='exampleHideShow'>
-          <h1 onClick={ this.hide.bind(this)}>Peek-a-Boo</h1>
+          <button className='btn' onClick={ this.hide.bind(this)}>Peek-a-Boo</button>
         </div>
         </div>
       );
@@ -36,7 +36,7 @@ export default class HideShow extends Component {
         <div>
         <legend>EXAMPLE HIDE/SHOW</legend>
         <div className='exampleHideShow2'>
-          <h4 onClick={ this.show.bind(this)}>Click Here</h4>
+          <button className='btn' onClick={ this.show.bind(this)}>Click Here</button>
           </div>
         </div>
       );

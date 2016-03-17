@@ -18,11 +18,12 @@ body {
 .exampleHideShow {
   width: fit-content;
   background-color: blue;
+
 }
 
 .exampleHideShow2 {
   width: fit-content;
-  background-color: red;
+
 }
 
 .blocked {
@@ -34,4 +35,8 @@ body {
   hieght: 500px;
   border-radius: 5px;
   border: solid 1px;
+}
+
+.last {
+  margin-bottom: 100px;
 }

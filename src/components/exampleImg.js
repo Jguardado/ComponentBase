@@ -10,7 +10,7 @@ export default class Picture extends Component {
     return (
       <div>
         <legend>EXAMPLE PICTURE</legend>
-        <img className='picture' src='/src/images/myFace.jpg'/>
+        <img className='picture last' src='/src/images/myFace.jpg'/>
       </div>
     );
   }
