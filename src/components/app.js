@@ -8,6 +8,10 @@ import Textbox from './exampleTextbox';
 import SliderBar from './exampleSliderbar';
 import { Button } from 'react-bootstrap';
 import Picture from './exampleImg';
+import Dropdown from './exampleDropdown';
+
+//the current implementation of Bootstrap does not include the animation capabilities.
+//It was strictly incorperated for the css attributes
 
 export default class App extends Component {
 
@@ -25,6 +29,7 @@ export default class App extends Component {
         <Textbox />
         <SliderBar />
         <Picture />
+        <Dropdown />
       </div>
     );
   }
