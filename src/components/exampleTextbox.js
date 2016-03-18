@@ -40,7 +40,7 @@ export default class Textbox extends Component {
       <label>You title/description here</label>
       <textarea
         rows='5'
-        className='blocked'
+        className='blocked textbox'
         value={ this.state.value }
         placeholder="Whats Good..."
         onChange={this.handleChange.bind(this)} >

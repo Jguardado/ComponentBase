@@ -40,3 +40,8 @@ body {
 .last {
   margin-bottom: 100px;
 }
+
+.textbox {
+  width: 500px;
+  height: 500px;
+}

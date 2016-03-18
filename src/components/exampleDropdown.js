@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
 
+//Dropdowns can be used in many ways.
+//they can be positioned on the side of teh screen acting as a sidebar.
+//This functionallity it primariluy based on CSS and positioning.
+
+//As well the choice to use "onMouseOver" is to show functionallity but can easily be replaced with
+//'onMouseLeave', "onMouseEnter", or any o teh other react event handlers.
+
 export default class Dropdown extends Component {
   constructor(props) {
     super(props);
 
+    //List is added below beacuse this componeent is not currently linked to any model or props chain.
+    
     this.state = {
       listVisible: false,
       list: ['one', 'two', 'three'],
@@ -46,7 +55,7 @@ export default class Dropdown extends Component {
 
   render() {
     return (
-      <div>
+      <div className='last'>
       <legend>EXAMPLE DROPDOWN</legend>
         <h6 onMouseOver={this.makeVisable}>List of items</h6>
         {this.renderList()}
