@@ -12,7 +12,7 @@ export default class Dropdown extends Component {
     super(props);
 
     //List is added below beacuse this componeent is not currently linked to any model or props chain.
-    
+
     this.state = {
       listVisible: false,
       list: ['one', 'two', 'three'],
