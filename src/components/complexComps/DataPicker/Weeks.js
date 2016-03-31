@@ -1,11 +1,22 @@
+import React, {Component} from 'react'
+import DateUtilities from './DateUtilities'
+
+
 class Weeks extends Component {
 
-  getInitialState() {
+  constructor(props) {
+    super(props)
+
     return {
       view: DateUtilities.clone(this.props.view),
       other: DateUtilities.clone(this.props.view),
       sliding: null,
     };
+
+    this.onTransitionEnd = this.onTransitionEnd.bind(this);
+    this.getWeekStartDates = this.getWeekStartDates.bind(this);
+    this.moveTo = this.moveTo.bind(this);
+    this.renderWeeks = this.renderWeeks.bind(this);
   }
 
   componentDidMount() {
@@ -76,7 +87,8 @@ renderWeeks(view) {
           selected= {this.props.selected}
           onSelect={this.props.onSelect.bind(this)}
           minDate={this.props.minDate.bind(this)}
-          maxDate={this.props.maxDate.bind(this)}/>
+          maxDate={this.props.maxDate.bind(this)}
+        />
       )
     })
 

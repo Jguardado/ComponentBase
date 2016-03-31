@@ -21,6 +21,8 @@ class DatePicker extends Component {
     this.onSelect = this.onSelect.bind(this);
     this.show = this.show.bind(this);
     this.hide = this.hide.bind(this);
+    this.parentsHaveClassName = this.parentsHaveClassName.bind(this);
+    this.onSelect = this.onSelect.bind(this);
 
   }
 
