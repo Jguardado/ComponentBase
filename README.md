@@ -6,9 +6,8 @@ a library of ready to use React components built in Es6.
 
 ## Team
 
-  - __Product Owner__: teamMember
-  - __Scrum Master__: teamMember
-  - __Development Team Members__: teamMember, teamMember
+  - __Product Owner__: Juan Guardado
+
 
 ## Table of Contents
 
@@ -40,7 +39,7 @@ All requirements can be loaded with our NPM install
 ### Installing Dependencies
 
 From within the root directory:
-```
+```sh
 npm install
 
 ```
