@@ -1,5 +1,3 @@
-# HiRproject
-
 # ComponentBase
 
 a library of ready to use React components built in Es6.
