@@ -1,26 +1,4 @@
-# HiRproject
-
-# ComponentBase
-
-a library of ready to use React components built in Es6.
-
-## Team
-
-  - __Product Owner__: teamMember
-  - __Scrum Master__: teamMember
-  - __Development Team Members__: teamMember, teamMember
-
-## Table of Contents
-
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
-    1. [Installing Dependencies](#installing-dependencies)
-    1. [Tasks](#tasks)
-1. [Team](#team)
-1. [Contributing](#contributing)
-
-## Usage
+xxName of project herexx is a library of ready to use React components built in Es6.
 
 This library is compiled of commonly used a components and is for the use in personal construction of your own React websites
 the goal is to provide readily compatible code snippets that can be dropped into any project without the hassle/
@@ -31,29 +9,4 @@ This library is a work in progress. Being a product of the code I learned from o
 
 If you find any of the components useful and happen to include them in your projects the only thing I ask is that you star the repo on github so that we can bring attention to the usefulness of this library to others who might not be aware of this.
 
-## Requirements
-
-All requirements can be loaded with our NPM install
-
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-```
-npm install
-
-```
-
-
-### Roadmap
-
-View the project roadmap [here](LINK_TO_PROJECT_ISSUES)
-
-
-## Contributing
-
 Any recommendations for components can be submitted as github issues and will receive my fullest attention.
-
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
