@@ -15,6 +15,13 @@ body {
   margin-top: 10px;
   margin-bottom: 200px;
 }
+
+.mainTwo {
+  background-color: white;
+  border-radius: 7px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
 .exampleHideShow {
   width: fit-content;
   background-color: blue;
@@ -52,4 +59,8 @@ body {
 
 .headingtext {
   font-family: 'Architects Daughter', cursive;
+}
+
+.intro {
+  background-color: 'white';
 }
