@@ -1,13 +1,13 @@
-import React, {Component} from 'react'
-import DateUtilities from './DateUtilities'
-
+import React, {Component} from 'react';
+import DateUtilities from './DateUtilities';
 
 class Weeks extends Component {
 
   constructor(props) {
-    super(props)
+    super(props);
+    console.log('inside constructor');
 
-    return {
+    this.state = {
       view: DateUtilities.clone(this.props.view),
       other: DateUtilities.clone(this.props.view),
       sliding: null,
@@ -36,11 +36,11 @@ class Weeks extends Component {
     view.setDate(1);
     view = DateUtilities.moveToDayOfWeek(DateUtilities.clone(view), 0);
 
-    var current = DateUtilities.clone(view);
+    const current = DateUtilities.clone(view);
     current.setDate(current.getDate() + 7);
 
-    var starts = [view],
-    month = current.getMonth();
+    const starts = [view];
+    const month = current.getMonth();
 
     while (current.getMonth() === month) {
       starts.push(DateUtilities.clone(current));
@@ -57,41 +57,43 @@ class Weeks extends Component {
     });
   }
 
+  renderWeeks(view) {
+    const starts = this.getWeekStartDates(view);
+    const month = starts[1].getMonth();
+
+    return (
+      starts.map(function (s, i) {
+        return (
+          <Week
+          key={i}
+          start={s}
+          month={month}
+          selected= {this.props.selected}
+          onSelect={this.props.onSelect.bind(this)}
+          minDate={this.props.minDate.bind(this)}
+          maxDate={this.props.maxDate.bind(this)}
+          />
+        );
+      }));
+
+  }
+
   render() {
     const outcome = 'current' + (this.state.sliding ? (' sliding ' + this.state.sliding) : '');
     const outcomeTwo = 'other' + (this.state.sliding ? (' sliding' + this.state.sliding) : '');
 
+    console.log('begining to render');
+
     return (
       <div className='weeks'>
-        <div ref='current' className={outcome}>
+        <div className={outcome}>
           {this.renderWeeks(this.state.view)}
         </div>
-        <div ref='other' className={outcomeTwo}>
+        <div className={outcomeTwo}>
           {this.renderWeeks(this.state.other)}
         </div>
       </div>
     );
   }
-
-renderWeeks(view) {
-  var starts = this.getWeekStartDates(view),
-  month = starts[1].getMonth();
-
-  return (
-    starts.map(function (s, i) {
-      return (
-        <Week
-          key=i
-          start=s
-          month=month
-          selected= {this.props.selected}
-          onSelect={this.props.onSelect.bind(this)}
-          minDate={this.props.minDate.bind(this)}
-          maxDate={this.props.maxDate.bind(this)}
-        />
-      )
-    })
-
-}
 
 }

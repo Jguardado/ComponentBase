@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import MonthHeader from './MonthHeader';
+import MonthHeader, { enable } from './MonthHeader';
 import WeekHeader from './WeekHeader';
-import Weeks from './Weeks';
+import Weeks, { moveTo }from './Weeks';
 
 export default class Calendar extends Component {
 
@@ -10,15 +10,15 @@ export default class Calendar extends Component {
   }
 
   onTransitionEnd() {
-    MonthHeader.enable();
+    this.refs.monthHeader.enable();
   }
 
   render() {
     const outcome = 'calendar' + this.props.visible ? ' visible' : '';
-
+    console.log('starting to render', outcome);
     return (
       <div className={outcome}>
-        <MonthHeader view={this.props.view} onMove={this.onMove}/>
+        <MonthHeader ref='monthHeader' view={this.props.view} onMove={this.onMove}/>
         <WeekHeader />
         <Weeks
           ref='weeks'

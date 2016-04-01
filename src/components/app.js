@@ -9,6 +9,7 @@ import SliderBar from './exampleSliderbar';
 import { Button } from 'react-bootstrap';
 import Picture from './exampleImg';
 import Dropdown from './exampleDropdown';
+import DatePickerCom from './DataPicker/Calender';
 
 //the current implementation of Bootstrap does not include the animation capabilities.
 //It was strictly incorperated for the css attributes
@@ -30,6 +31,7 @@ export default class App extends Component {
         <SliderBar />
         <Picture />
         <Dropdown />
+        <DatePickerCom />
       </div>
     );
   }
