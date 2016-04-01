@@ -56,7 +56,7 @@ export default class Dropdown extends Component {
   render() {
     return (
       <div className='last'>
-      <legend>EXAMPLE DROPDOWN</legend>
+      <legend className='headingtext'>EXAMPLE DROPDOWN</legend>
         <h6 onMouseOver={this.makeVisable}>List of items</h6>
         {this.renderList()}
       </div>

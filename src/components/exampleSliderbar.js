@@ -19,7 +19,7 @@ export default class SliderBar extends Component {
   render() {
     return (
       <div>
-      <legend>EXAMPLE SLIDER BAR</legend>
+      <legend className='headingtext'>EXAMPLE SLIDER BAR</legend>
         <div className="barSlider">
           <input type="range" min='0'
             max='10'

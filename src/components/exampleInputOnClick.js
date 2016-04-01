@@ -32,7 +32,7 @@ export default class InputOnClick extends Component {
     return (
         <form>
           <fieldset>
-          <legend>EXAMPLE INPUT WITH SUBMIT BUTTON</legend>
+          <legend className='headingtext'>EXAMPLE INPUT WITH SUBMIT BUTTON</legend>
             <input
             type='text'
             value= {this.state.value}

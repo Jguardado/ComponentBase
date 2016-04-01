@@ -23,7 +23,7 @@ export default class HideShow extends Component {
     if (this.state.visible) {
       return (
         <div>
-        <legend>EXAMPLE HIDE/SHOW</legend>
+        <legend className='headingtext'>EXAMPLE HIDE/SHOW</legend>
         <div className='exampleHideShow'>
           <button className='btn' onClick={ this.hide.bind(this)}>Peek-a-Boo</button>
         </div>
@@ -34,7 +34,7 @@ export default class HideShow extends Component {
     if (!this.state.visible) {
       return (
         <div>
-        <legend>EXAMPLE HIDE/SHOW</legend>
+        <legend className='headingtext'>EXAMPLE HIDE/SHOW</legend>
         <div className='exampleHideShow2'>
           <button className='btn' onClick={ this.show.bind(this)}>Click Here</button>
           </div>
