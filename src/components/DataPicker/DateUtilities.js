@@ -43,4 +43,8 @@ export default class DateUtilities extends Component {
       return first.getTime() > second.getTime();
     }
 
+    render() {
+      return <div></div>;
+    }
+
 }

@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import Calendar from './Calender';
+import DateUtilities from './DateUtilities';
 
 class DatePicker extends Component {
 
   constructor(props) {
     super(props);
 
+    // console.log('this is DateUtilities', DateUtilities.prototype);
     var def = this.props.selected || new Date();
 
     return {
-      view: DateUtilities.clone(def),
-      selected: DateUtilities.clone(def),
+      view: DateUtilities.prototype.clone(def),
+      selected: DateUtilities.prototype.clone(def),
       minDate: null,
       maxDate: null,
       visible: false,
@@ -66,12 +68,13 @@ class DatePicker extends Component {
   }
 
   render() {
+
     return (
       <div className='ardp-date-picker'>
         <input
           type='text'
           className='date-picker-trigger'
-          value={DateUtilities.toString(this.state.selected)}
+          value={DateUtilities.prototype.toString(this.state.selected)}
           onClick={this.show } />
         <Calendar
           visible={ this.state.visible }
