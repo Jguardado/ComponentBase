@@ -21,6 +21,7 @@ body {
   border-radius: 7px;
   margin-top: 10px;
   margin-bottom: 50px;
+  font-size: 20px;
 }
 .exampleHideShow {
   width: fit-content;
@@ -63,4 +64,12 @@ body {
 
 .intro {
   background-color: 'white';
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
