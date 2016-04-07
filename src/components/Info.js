@@ -5,8 +5,7 @@ export default class Info extends Component {
     return (
       <div className='right'>
       This will be the instructional portion
-      <pre><code data-lang='javascript'>
-      </code></pre>
+      <code>{'import body { color: blue; }'}</code>
         <a href='www.google.com'>Code</a>
       </div>
     );

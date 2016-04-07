@@ -19,7 +19,7 @@ A library of ready to use React components built in ES6.
 
 ## Usage
 
-This library is compiled of commonly used components and is for the use in personal construction of your own React websites.
+ComponentBase is a library compiled of commonly used components and is intended for the use in personal construction of React websites.
 The goal is to provide readily compatible code snippets that can be dropped into any project without the hassle of added NPM modules or a litany of documentation that must be read simply to determine whether or not this component
 is the right fit for your project.
 
