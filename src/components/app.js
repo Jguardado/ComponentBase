@@ -13,6 +13,7 @@ import DatePickerCom from './DataPicker/DatePicker';
 import Banner from './Banner';
 import Intro from './Intro';
 import Info from './Info';
+import NavBar from './exampleNavBar';
 
 //the current implementation of Bootstrap does not include the animation capabilities.
 //It was strictly incorperated for the css attributes
@@ -27,6 +28,7 @@ export default class App extends Component {
         <Intro />
         <div className='container main'>
         <h1 className='page-header headingtext'>EXAMPLE OF USEFUL FUNCTIONS</h1>
+          <NavBar />
           <div>
             <HideShow/>
             <Info />
