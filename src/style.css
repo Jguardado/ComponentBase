@@ -130,6 +130,10 @@ body {
   text-align: center;
 }
 
+.inline {
+  display: inline-flex;
+}
+
 
 
 
