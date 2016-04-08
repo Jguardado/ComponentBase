@@ -58,10 +58,7 @@ body {
   margin-bottom: 100px;
 }
 
-.textbox {
-  width: 500px;
-  height: 500px;
-}
+
 
 .jumobotext {
   font-family: 'Berkshire Swash', cursive;
@@ -96,4 +93,25 @@ body {
   font-weight: bolder;
   font-size: 23px;
   font-family: 'Architects Daughter', cursive;
+}
+
+.center {
+  text-align: center;
+}
+
+.comments {
+  display: inline-block;
+}
+
+.commentBox {
+  width: 500px;
+  height: 250px;
+  text-align: right;;
+  color: black;
+}
+
+.textbox {
+  width: 500px;
+  height: 250px;
+  color: black;
 }

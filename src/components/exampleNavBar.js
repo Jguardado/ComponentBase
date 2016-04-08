@@ -27,7 +27,7 @@ export default class NavBar extends Component {
     var _this = this;
 
     return (
-        <div>
+        <div className='center'>
         <legend className='headingtext'>EXAMPLE NAVBAR</legend>
           <ul>{ this.state.items.map(function (m, index) {
             var style = '';

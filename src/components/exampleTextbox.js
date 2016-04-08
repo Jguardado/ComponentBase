@@ -34,23 +34,29 @@ export default class Textbox extends Component {
   render() {
 
     return (
-    <form>
-      <fieldset>
-      <legend className='headingtext'>EXAMPLE TEXT/COMMENT BOX</legend>
-      <label>You title/description here</label>
-      <textarea
-        rows='5'
-        className='blocked textbox'
-        value={ this.state.value }
-        placeholder="Whats Good..."
-        onChange={this.handleChange.bind(this)} >
-      </textarea>
-      <button
-      type="submit"
-      className='btn blocked'
-      onClick={this.handleSubmit.bind(this)}>Submit</button>
-      </fieldset>
-    </form>
+      <div>
+        <form>
+          <fieldset>
+            <legend className='headingtext'>EXAMPLE TEXT/COMMENT BOX</legend>
+            <label className='blocked'>Your Title/Description here</label>
+            <textarea
+              rows='5'
+              className='textbox comments'
+              value={ this.state.value }
+              placeholder="Whats Good..."
+              onChange={this.handleChange.bind(this)} >
+            </textarea>
+            <textarea
+              className='comments commentBox'
+              value={this.state.comment}>
+            </textarea>
+            <button
+            type="submit"
+            className='btn blocked'
+            onClick={this.handleSubmit.bind(this)}>Submit</button>
+          </fieldset>
+        </form>
+      </div>
     );
   }
 }

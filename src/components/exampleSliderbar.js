@@ -18,7 +18,7 @@ export default class SliderBar extends Component {
   //TODO: Research needed. Receiving error about input children
   render() {
     return (
-      <div>
+      <div className='center'>
       <legend className='headingtext'>EXAMPLE SLIDER BAR</legend>
         <div className="barSlider">
           <input type="range" min='0'

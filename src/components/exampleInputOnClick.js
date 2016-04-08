@@ -30,7 +30,7 @@ export default class InputOnClick extends Component {
   render() {
 
     return (
-        <form>
+        <form className='center'>
           <fieldset>
           <legend className='headingtext'>EXAMPLE INPUT WITH SUBMIT BUTTON</legend>
             <input
