@@ -17,7 +17,7 @@ body {
 }
 /*Styling for the Jumbotron header*/
 .jumbotron {
-  background: rgba(160,211,154,0.80)
+  background: rgba(160,211,154,0.5)
 }
 .jumobotext {
   font-family: 'Berkshire Swash', cursive;
@@ -35,7 +35,7 @@ body {
 
 .mainTwo {
   color: white;
-  background-color: rgba( 69,145, 61, 0.5);
+  background-color: rgba( 69,145, 61, 0.33);
   border-radius: 7px;
   margin-top: 10px;
   margin-bottom: 50px;
@@ -131,7 +131,7 @@ body {
 }
 
 .inline {
-  display: inline-flex;
+  display: inline-block;
 }
 
 
