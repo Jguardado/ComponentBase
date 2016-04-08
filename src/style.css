@@ -23,6 +23,12 @@ body {
   font-family: 'Berkshire Swash', cursive;
 }
 
+/*Styling for the footer*/
+
+.foot {
+  height: 100px;
+}
+
 
 /*styling for the large holding components*/
 .main {
