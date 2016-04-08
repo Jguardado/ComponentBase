@@ -21,6 +21,8 @@ body {
   border-radius: 7px;
   margin-top: 10px;
   margin-bottom: 200px;
+  overflow: scroll;
+  height: 600px;
 }
 
 .mainTwo {
@@ -29,7 +31,7 @@ body {
   border-radius: 7px;
   margin-top: 10px;
   margin-bottom: 50px;
-  font-size: 20px;
+  font-size: 14px;
   border: 2px solid white
 }
 .exampleHideShow {
@@ -85,7 +87,8 @@ body {
   border: 2px solid black;
   border-radius: 5px;
   margin-bottom: 5px;
-  background-color: #748BA7
+  background-color: #748BA7;
+  opacity: 0.75;
 }
 
 .gitLink {
