@@ -4,9 +4,11 @@ export default class Info extends Component {
   render() {
     return (
       <div className='right'>
-      This will be the instructional portion
-      <code>{'import body { color: blue; }'}</code>
-        <a href={this.props.github}>Get the Code</a>
+        <p>{this.props.info}</p>
+        <code>{'import body { color: blue; }'}</code>
+        <div>
+          <a className='gitLink' href={this.props.github}>GET THE CODE</a>
+        </div>
       </div>
     );
   }

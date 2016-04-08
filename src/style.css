@@ -24,6 +24,7 @@ body {
 }
 
 .mainTwo {
+  color: white;
   background-color: #748BA7;
   border-radius: 7px;
   margin-top: 10px;
@@ -83,8 +84,16 @@ body {
 }
 
 .componentBox {
-  border: 2px solid;
+  color: white;
+  border: 2px solid black;
   border-radius: 5px;
   margin-bottom: 5px;
   background-color: #748BA7
+}
+
+.gitLink {
+  color: white;
+  font-weight: bolder;
+  font-size: 23px;
+  font-family: 'Architects Daughter', cursive;
 }

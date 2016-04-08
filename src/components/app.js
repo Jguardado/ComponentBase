@@ -64,7 +64,7 @@ export default class App extends Component {
             <Picture />
             <Info />
           </div>
-          <div className='componentBox'>
+          <div className='componentBox last'>
             <Dropdown />
             <Info />
           </div>
