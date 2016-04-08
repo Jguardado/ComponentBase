@@ -35,7 +35,7 @@ export default class NavBar extends Component {
               style = 'focused';
             }
 
-            return <button className={style} key={index} onClick={_this.clicked.bind(self, index)}>{m}</button>;
+            return <button className={style} className='btn btn-info' key={index} onClick={_this.clicked.bind(self, index)}>{m}</button>;
           }) }
 
           </ul>
