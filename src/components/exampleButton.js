@@ -4,7 +4,7 @@ export default class Buttons extends Component {
 
   render() {
     return (
-      <div>
+      <div className='center'>
       <legend className='headingtext'>EXAMPLE BUTTON</legend>
         <button
         className='btn btn-success'

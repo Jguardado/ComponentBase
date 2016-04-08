@@ -20,7 +20,7 @@ export default class InputForm extends Component {
   render() {
 
     return (
-      <div>
+      <div className='center'>
       <legend className='headingtext'>EXAMPLE INPUT FORM</legend>
         <div>
           <input type='text'
