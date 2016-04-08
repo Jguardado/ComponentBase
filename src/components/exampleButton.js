@@ -7,7 +7,7 @@ export default class Buttons extends Component {
       <div>
       <legend className='headingtext'>EXAMPLE BUTTON</legend>
         <button
-        className='btn btn-primary'
+        className='btn btn-success'
         onClick={ function () {
           console.log('Hey! who said press that button?');
         }}>Name of button here</button>
