@@ -46,27 +46,27 @@ export default class App extends Component {
           </div>
           <div className='componentBox'>
             <InputForm />
-            <Info />
+            <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleInputForm.js'/>
           </div>
           <div className='componentBox'>
             <InputOnClick />
-            <Info />
+            <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleInputOnClick.js'/>
           </div>
           <div className='componentBox'>
             <Textbox />
-            <Info />
+            <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleTextbox.js'/>
           </div>
           <div className='componentBox'>
             <SliderBar />
-            <Info />
+            <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleSliderbar.js'/>
           </div>
           <div className='componentBox'>
             <Picture />
-            <Info />
+            <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleImg.js'/>
           </div>
           <div className='componentBox last'>
             <Dropdown />
-            <Info />
+            <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleDropdown.js'/>
           </div>
         </div>
       </div>
