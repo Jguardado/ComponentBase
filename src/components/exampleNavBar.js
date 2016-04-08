@@ -28,13 +28,14 @@ export default class NavBar extends Component {
 
     return (
         <div>
+        <legend className='headingtext'>EXAMPLE NAVBAR</legend>
           <ul>{ this.state.items.map(function (m, index) {
             var style = '';
             if (_this.state.focused == index) {
               style = 'focused';
             }
 
-            return <li className={style} onClick={_this.clicked.bind(self, index)}>{m}</li>;
+            return <button className={style} key={index} onClick={_this.clicked.bind(self, index)}>{m}</button>;
           }) }
 
           </ul>

@@ -6,7 +6,7 @@ export default class Info extends Component {
       <div className='right'>
       This will be the instructional portion
       <code>{'import body { color: blue; }'}</code>
-        <a href='www.google.com'>Code</a>
+        <a href={this.props.github}>Get the Code</a>
       </div>
     );
   }

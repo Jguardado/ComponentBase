@@ -28,19 +28,46 @@ export default class App extends Component {
         <Intro />
         <div className='container main'>
         <h1 className='page-header headingtext'>EXAMPLE OF USEFUL FUNCTIONS</h1>
-          <NavBar />
-          <div>
+          <div className='componentBox'>
+            <NavBar />
+            <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleNavBar.js'/>
+          </div>
+          <div className='componentBox'>
             <HideShow/>
+            <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleHideShow.js'/>
+          </div>
+          <div className='componentBox'>
+            <Contructor />
+            <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/constructorFunc.js'/>
+          </div>
+          <div className='componentBox'>
+            <Buttons />
+            <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleButton.js'/>
+          </div>
+          <div className='componentBox'>
+            <InputForm />
             <Info />
           </div>
-          <Contructor />
-          <Buttons />
-          <InputForm />
-          <InputOnClick />
-          <Textbox />
-          <SliderBar />
-          <Picture />
-          <Dropdown />
+          <div className='componentBox'>
+            <InputOnClick />
+            <Info />
+          </div>
+          <div className='componentBox'>
+            <Textbox />
+            <Info />
+          </div>
+          <div className='componentBox'>
+            <SliderBar />
+            <Info />
+          </div>
+          <div className='componentBox'>
+            <Picture />
+            <Info />
+          </div>
+          <div className='componentBox'>
+            <Dropdown />
+            <Info />
+          </div>
         </div>
       </div>
     );

@@ -7,8 +7,15 @@ COMPONENTS
   position: absolute;
 }*/
 body {
-  background-color: grey;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#26558b+0,3a8bc2+16,4bb8f0+29,419ad6+41,3a84c3+49,6199c7+50,aac5de+83,cedbe9+100 */
+  background: #26558b; /* Old browsers */
+  background: -moz-linear-gradient(top,  #26558b 0%, #3a8bc2 16%, #4bb8f0 29%, #419ad6 41%, #3a84c3 49%, #6199c7 50%, #aac5de 83%, #cedbe9 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #26558b 0%,#3a8bc2 16%,#4bb8f0 29%,#419ad6 41%,#3a84c3 49%,#6199c7 50%,#aac5de 83%,#cedbe9 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #26558b 0%,#3a8bc2 16%,#4bb8f0 29%,#419ad6 41%,#3a84c3 49%,#6199c7 50%,#aac5de 83%,#cedbe9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26558b', endColorstr='#cedbe9',GradientType=0 ); /* IE6-9 */
+
 }
+
 .main {
   background-color: white;
   border-radius: 7px;
@@ -17,7 +24,7 @@ body {
 }
 
 .mainTwo {
-  background-color: white;
+  background-color: #748BA7;
   border-radius: 7px;
   margin-top: 10px;
   margin-bottom: 50px;
@@ -67,9 +74,16 @@ body {
 }
 
 .left {
-  float: left;
+
 }
 
 .right {
-  float: right;
+  text-align: right;
+}
+
+.componentBox {
+  border: 2px solid;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  background-color: #748BA7
 }
