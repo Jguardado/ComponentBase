@@ -1,11 +1,4 @@
-/*
-COMPONENTS
-*/
-/*.container {
-  border-style: dashed;
-  border-color: green;
-  position: absolute;
-}*/
+
 body {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#26558b+0,3a8bc2+16,4bb8f0+29,419ad6+41,3a84c3+49,6199c7+50,aac5de+83,cedbe9+100 */
   background: #26558b; /* Old browsers */
@@ -15,6 +8,8 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26558b', endColorstr='#cedbe9',GradientType=0 ); /* IE6-9 */
 
 }
+
+
 /*Styling for the Jumbotron header*/
 .jumbotron {
   background: rgba(160,211,154,0.5)
@@ -23,8 +18,9 @@ body {
   font-family: 'Berkshire Swash', cursive;
 }
 
-/*Styling for the footer*/
 
+
+/*Styling for the footer*/
 .foot {
   height: 175px;
   background: rgba(160,211,154,0.5)
@@ -55,6 +51,8 @@ body {
   height: 475px;
 }
 
+
+
 /*Styling for the display of the components*/
 .componentBox {
   color: black;
@@ -70,6 +68,8 @@ body {
   font-size: 23px;
   font-family: 'Architects Daughter', cursive;
 }
+
+
 
 /*Styling for the text box component*/
 .comments {
@@ -99,6 +99,8 @@ body {
   width: fit-content;
 }
 
+
+
 /*Styling for the picture component*/
 .picture {
   width: 500px;
@@ -107,8 +109,9 @@ body {
   border: solid 1px;
 }
 
-/*Universal Styling*/
 
+
+/*Universal Styling*/
 .blocked {
   display: block;
 }
