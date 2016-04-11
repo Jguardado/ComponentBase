@@ -25,10 +25,12 @@ body {
   height: 125px;
   background: rgba(160,211,154,0.5);
   font-weight: bold;
+  margin-bottom: 0px;
 }
 
 .head {
   height: 65px;
+  margin-bottom: 0px;
 }
 
 
@@ -37,8 +39,8 @@ body {
   background-color: white;
   border-radius: 4px;
   margin-top: 10px;
-  margin-bottom: 200px;
-  height: 600px;
+  margin-bottom: 30px;
+  height: 500px;
 }
 
 .mainTwo {
@@ -53,7 +55,7 @@ body {
 
 .scrollbar {
   overflow: scroll;
-  height: 475px;
+  height: 375px;
 }
 
 
@@ -82,15 +84,15 @@ body {
 }
 
 .commentBox {
-  width: 500px;
-  height: 250px;
+  width: 250px;
+  height: 150px;
   text-align: right;;
   color: black;
 }
 
 .textbox {
-  width: 500px;
-  height: 250px;
+  width: 250px;
+  height: 150px;
   color: black;
 }
 
@@ -108,8 +110,8 @@ body {
 
 /*Styling for the picture component*/
 .picture {
-  width: 500px;
-  height: 500px;
+  width: 325px;
+  height: 250px;
   border-radius: 5px;
   border: solid 1px;
 }
