@@ -9,9 +9,8 @@ export default class App extends Component {
     console.log(Router);
     return (
       <Router history={hashHistory}>
-        <Route path='/' component={Layout}>
-          <Route path='/component' component={ComponentPage}/>
-        </Route>
+        <Route path='/' component={Layout}/>
+        <Route path='/component' component={ComponentPage}/>
       </Router>
     );
   }
