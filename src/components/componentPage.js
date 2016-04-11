@@ -12,7 +12,9 @@ import Dropdown from './exampleDropdown';
 import Info from './Info';
 
 export default class ComponentPage extends Component {
+
   render() {
+    console.log('THIS IS SUPPOSED TO RENDER');
     return (
       <div className='container main'>
       <h1 className='page-header headingtext'>EXAMPLE OF USEFUL FUNCTIONS</h1>

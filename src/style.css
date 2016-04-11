@@ -20,10 +20,14 @@ body {
 
 
 
-/*Styling for the footer*/
+/*Styling for the footer and headers*/
 .foot {
   height: 175px;
   background: rgba(160,211,154,0.5)
+}
+
+.head {
+  height: 65px;
 }
 
 
