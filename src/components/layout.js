@@ -3,6 +3,7 @@ import Banner from './Banner';
 import Intro from './Intro';
 import Header from './exampleRouters';
 import Footer from './footer';
+import NewComps from './addedComponents';
 
 export default class Layout extends Component {
 
@@ -12,6 +13,7 @@ export default class Layout extends Component {
         <Header />
         <Banner />
         <Intro />
+        <NewComps />
         <Footer />
       </div>
     );
