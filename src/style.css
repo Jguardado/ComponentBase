@@ -22,8 +22,9 @@ body {
 
 /*Styling for the footer and headers*/
 .foot {
-  height: 175px;
-  background: rgba(160,211,154,0.5)
+  height: 125px;
+  background: rgba(160,211,154,0.5);
+  font-weight: bold;
 }
 
 .head {
