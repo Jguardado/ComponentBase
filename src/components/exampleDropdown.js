@@ -16,6 +16,7 @@ export default class Dropdown extends Component {
     this.state = {
       listVisible: false,
       list: ['one', 'two', 'three'],
+      button:'',
     };
 
     this.select = this.select.bind(this);
@@ -29,7 +30,7 @@ export default class Dropdown extends Component {
     console.log('this is supposed to be item', item);
   }
 
-  makeVisable() {
+  makeVisable(btnName) {
     console.log('mouse over activated');
     this.setState({ listVisible: !this.state.listVisible }, console.log(this.state.listVisible));
   }
@@ -41,23 +42,26 @@ export default class Dropdown extends Component {
       //this is where you would be able to iterate over any collection pulled in through props.
       for (var i = 0; i < this.state.list.length; i++) {
         items.push(<div onClick={this.select.bind(this, this.state.list[i])}>
-        <span>{this.state.list[i]}</span>
+        <li>{this.state.list[i]}</li>
         </div>);
       }
 
       return items;
 
     } else {
-      return <div></div>;
+      return <div>Select List</div>;
     }
 
   }
 
   render() {
     return (
-      <div className='center'>
+      <div>
       <legend className='headingtext'>EXAMPLE DROPDOWN</legend>
-        <h6 onMouseOver={this.makeVisable}>List of items</h6>
+        <div className='inline'>
+        <label>MouseOver</label>
+          <button className='btn btn-primary blocked' onMouseOver={this.makeVisable}>List of items</button>
+        </div>
         {this.renderList()}
       </div>
     );
