@@ -18,13 +18,14 @@ import { Link } from 'react-router';
 export default class Header extends Component {
     render() {
       return (
-        <div className='panel panel-default head'>
-          <h3>
-            <Link to='/' className='col-md-3'>Home</Link>
-            <Link to='/component' className='col-md-3'>Samples</Link>
-            <a className='col-md-3' href='https://github.com/Jguardado'>GitHub</a>
-            <a className='col-md-3' href='https://jguardado.github.io/'>Blog</a>
-          </h3>
+        <div className='navbar head'>
+          <h5>
+          <Link to='/' className='col-md-1'>Home</Link>
+          <a className='col-md-1' href='https://github.com/Jguardado'>GitHub</a>
+          <a className='col-md-1' href='https://jguardado.github.io/'>Blog</a>
+          <Link to='/component' className='col-md-1'>Samples</Link>
+          </h5>
+          <h4 className='col-md-offset-10 jumobotext'>ComponentBase</h4>
         </div>
       );
     }
