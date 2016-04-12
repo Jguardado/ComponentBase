@@ -38,12 +38,14 @@ html, body {
 .newcomp {
   height: 200px;
   border-radius: 4px;
-  font-size: 14px;
-  background-color: rgba( 69,145, 61, 0.33);
+  font-size: 0.7vw;
+  background-color: rgba( 69,145, 61, 0.7);
   margin-bottom: 50px;
   margin-top: 0px;
   font-family: 'Open Sans', sans-serif;
   font-weight: bolder;
+  margin-left: 70px;
+  margin-right: 10px;
 }
 
 .list-items {
@@ -64,8 +66,6 @@ html, body {
   background-color: rgba( 69,145, 61, 0.33);
   margin-top: 10px;
   margin-bottom: 50px;
-  font-size: 14px;
-
 }
 
 .scrollbar {

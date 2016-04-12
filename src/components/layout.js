@@ -4,6 +4,8 @@ import Intro from './Intro';
 import Header from './exampleRouters';
 import Footer from './Footer';
 import NewComps from './addedComponents';
+import NewBlogs from './NewBlogs';
+import OtherProjects from './reccomendedProjects';
 
 export default class Layout extends Component {
 
@@ -14,6 +16,8 @@ export default class Layout extends Component {
         <Banner />
         <Intro />
         <NewComps />
+        <NewBlogs />
+        <OtherProjects />
         <Footer />
       </div>
     );
