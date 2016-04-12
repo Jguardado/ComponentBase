@@ -7,7 +7,13 @@ html, body {
 
 /*Styling for the Jumbotron header*/
 .jumbotron {
-  background: rgba(160,211,154,0.5)
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b4e2b4+0,82ce82+17,50bc50+33,009600+67,006400+83,003200+100 */
+  background: #b4e2b4; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #b4e2b4 0%, #82ce82 17%, #50bc50 33%, #009600 67%, #006400 83%, #003200 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover,  #b4e2b4 0%,#82ce82 17%,#50bc50 33%,#009600 67%,#006400 83%,#003200 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center,  #b4e2b4 0%,#82ce82 17%,#50bc50 33%,#009600 67%,#006400 83%,#003200 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e2b4', endColorstr='#003200',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  height: 450px;
 }
 .jumobotext {
   font-family: 'Berkshire Swash', cursive;
@@ -20,7 +26,7 @@ html, body {
 .foot {
   font-family:'Open Sans', sans-serif;
   height: 125px;
-  background: rgba(160,211,154,0.5);
+  background: rgba( 43,119, 35,1);
   font-weight: bold;
   margin-bottom: 0px;
   clear: both;
@@ -36,7 +42,8 @@ html, body {
   border-radius: 4px;
   font-size: 14px;
   background-color: rgba( 69,145, 61, 0.33);
-  margin-bottom: 10px;
+  margin-bottom: 50px;
+  margin-top: 0px;
 }
 
 .list-items {
@@ -129,6 +136,16 @@ html, body {
   display: block;
 }
 
+.logo {
+  height: 200px;
+  width: 250px;
+}
+
+.small-logo {
+  height: 50px;
+  width: 60px;
+}
+
 .last {
   margin-bottom: 100px;
 }
@@ -138,7 +155,7 @@ html, body {
 }
 
 .intro {
-  background-color: 'white';
+  font-size: 2.0vw;
 }
 
 .left {
