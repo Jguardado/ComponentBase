@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 export default class Intro extends Component {
   render() {
     return (
       <div className='intro mainTwo'>
         <p className='headingtext tab'>ComponentBase is a library that is
-        compiled of commonly used a components and is intended for the use in personal
+        compiled of commonly used a <Link to='/component'>components</Link> and is intended for the use in personal
         construction of React websites. </p>
         <p className='headingtext tab'>The goal is to provide readily compatible code
         snippets that can be dropped into any project without the hassle of added NPM
@@ -14,8 +15,8 @@ export default class Intro extends Component {
 
         <p className='headingtext tab'>This library is a work in progress.
         Being a product of the code I learned from other open source projects I welcome
-        contributions and review. If there is a recommendation for best practice usage
-        Im sure I can find a way to integrate that into this library as well.</p>
+        <a href='https://github.com/Jguardado/ComponentBase/issues'> contributions and review</a>. If there are any recommendation for best practice usage
+        Ill be happy to review and integrate your suggestions into this library.</p>
       </div>
     );
   }

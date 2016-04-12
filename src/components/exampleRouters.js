@@ -23,7 +23,7 @@ export default class Header extends Component {
           <Link to='/' className='col-md-1'>Home</Link>
           <a className='col-md-1' href='https://github.com/Jguardado'>GitHub</a>
           <a className='col-md-1' href='https://jguardado.github.io/'>Blog</a>
-          <Link to='/component' className='col-md-1'>Samples</Link>
+          <Link to='/component' className='col-md-1'>Components</Link>
           </h5>
           <h4 className='col-md-offset-10 jumobotext'>ComponentBase</h4>
         </div>
