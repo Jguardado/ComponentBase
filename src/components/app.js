@@ -6,7 +6,6 @@ import Layout from './layout';
 export default class App extends Component {
 
   render() {
-    console.log(Router);
     return (
       <Router history={hashHistory}>
         <Route path='/' component={Layout}/>

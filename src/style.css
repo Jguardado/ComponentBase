@@ -1,6 +1,8 @@
+p {
+  text-indent: 50px;
+}
 
 html, body {
-
 
 }
 
@@ -44,6 +46,8 @@ html, body {
   background-color: rgba( 69,145, 61, 0.33);
   margin-bottom: 50px;
   margin-top: 0px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bolder;
 }
 
 .list-items {
@@ -164,6 +168,10 @@ html, body {
 
 .right {
   text-align: right;
+}
+
+.tab {
+  text-indent: 40px;
 }
 
 .center {

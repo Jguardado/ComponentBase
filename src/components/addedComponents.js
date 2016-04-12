@@ -11,10 +11,11 @@ class AddedComponents extends Component {
       <div className='col-md-3 col-md-offset-8 newcomp'>
         <legend>Recently Added Components</legend>
           <h5>
-            <li className='list-items'><a href='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleNavBar.js'>Navbar</a></li>
-            <li className='list-items'><a href='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleTextbox.js'>TextBox</a></li>
-            <li className='list-items'><a href='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleDropdown.js'>DropDown</a></li>
+            <ul className='list-items'><a href='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleNavBar.js'>Navbar</a></ul>
+            <ul className='list-items'><a href='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleTextbox.js'>TextBox</a></ul>
+            <ul className='list-items'><a href='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleDropdown.js'>DropDown</a></ul>
           </h5>
+          <span>note: new components will be added as they are created aor edited</span>
       </div>
     );
   }
