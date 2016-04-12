@@ -7,7 +7,7 @@ export default class Info extends Component {
         <p>{this.props.info}</p>
         <code>{'import body { color: blue; }'}</code>
         <div>
-          <a className='gitLink' href={this.props.github}>GET THE CODE</a>
+          <h4><a className='gitLink' href={this.props.github}>Get the Code</a></h4>
         </div>
       </div>
     );

@@ -37,7 +37,7 @@ export default class Textbox extends Component {
       <div>
         <form>
           <fieldset>
-            <legend className='headingtext'>EXAMPLE TEXT/COMMENT BOX</legend>
+            <legend className='headingtext'>Example Text/Comment Box</legend>
             <label className='blocked'>Your Title/Description here</label>
             <textarea
               rows='5'

@@ -13,7 +13,7 @@ export default class Contructor extends Component {
 
     return (
       <div className='center'>
-      <legend className='headingtext'>EXAMPLE CONSTRUCTOR</legend>
+      <legend className='headingtext'>Example Constructor</legend>
       {this.state.test}
       </div>
     );

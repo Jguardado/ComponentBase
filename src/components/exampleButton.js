@@ -5,7 +5,7 @@ export default class Buttons extends Component {
   render() {
     return (
       <div className='center'>
-      <legend className='headingtext'>EXAMPLE BUTTON</legend>
+      <legend className='headingtext'>Example Button</legend>
         <button
         className='btn btn-success'
         onClick={ function () {

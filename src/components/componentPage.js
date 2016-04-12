@@ -21,7 +21,7 @@ export default class ComponentPage extends Component {
       <div>
         <Header />
         <div className='container main'>
-        <h1 className='page-header headingtext'>EXAMPLE OF USEFUL FUNCTIONS</h1>
+        <h1 className='page-header headingtext'>Example of Useful Functions</h1>
           <div className='scrollbar'>
             <div className='componentBox'>
               <NavBar />

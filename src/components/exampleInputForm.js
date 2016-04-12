@@ -21,7 +21,7 @@ export default class InputForm extends Component {
 
     return (
       <div className='center'>
-      <legend className='headingtext'>EXAMPLE INPUT FORM</legend>
+      <legend className='headingtext'>Example Input Form</legend>
         <div>
           <input type='text'
           placeholder='type somethin'

@@ -57,7 +57,7 @@ export default class Dropdown extends Component {
   render() {
     return (
       <div>
-      <legend className='headingtext'>EXAMPLE DROPDOWN</legend>
+      <legend className='headingtext'>Example Dropdown</legend>
         <div className='inline'>
         <label>MouseOver</label>
           <button className='btn btn-primary blocked' onMouseOver={this.makeVisable}>List of items</button>
