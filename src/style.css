@@ -22,7 +22,7 @@ html, body {
 
 /*Styling for the footer and headers*/
 .foot {
-  font-family:'Open Sans', sans-serif;
+  font-family: 'Didact Gothic', sans-serif;
   height: 125px;
   background: rgba( 43,119, 35,1);
   font-weight: bold;
@@ -42,7 +42,7 @@ html, body {
   background-color: rgba( 69,145, 61, 0.7);
   margin-bottom: 50px;
   margin-top: 35px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Didact Gothic', sans-serif;
   font-weight: bolder;
   margin-left: 70px;
   margin-right: 10px;
@@ -86,7 +86,7 @@ html, body {
 
 .gitLink {
   font-weight: bold;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Didact Gothic', sans-serif;
 }
 
 
@@ -151,7 +151,7 @@ html, body {
 }
 
 .headingtext {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Didact Gothic', sans-serif;
 }
 
 .intro {
