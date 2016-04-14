@@ -52,6 +52,11 @@ html, body {
   margin-bottom: 5px;
 }
 
+/*Progress Bar styling*/
+.progressbar {
+  border-radius: 4px;
+  border: 1px solid white;
+}
 
 /*styling for the large holding components*/
 .main {
