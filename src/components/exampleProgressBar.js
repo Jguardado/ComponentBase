@@ -1,13 +1,11 @@
-// var completed = +this.props.completed;
-// if (completed < 0) {completed = 0;};
-//
-// if (completed > 100) {completed = 100;};
 import React, { Component } from 'react';
 
 class ProgressBar extends Component {
   constructor(props) {
     super(props);
 
+    //the level of the completed bar is currently represent by this.state.completed.
+    //this can be changed easily but sitting it to a prop value
     this.state = {
       completed: 0,
       color: '#0BD318',
@@ -47,9 +45,9 @@ class ProgressBar extends Component {
     return (
       <div className="center">
         <legend>Progress bar</legend>
-        <button className='btn btn-success' onClick={this.increaseBar}>Start</button>
         <div className="progressbar" style={style}>{this.state.completed}</div>
-        <button className='btn btn-success' onClick={this.reset.bind(this)}>Reset bar</button>
+        <button className='btn btn-success inline' onClick={this.increaseBar}>Start</button>
+        <button className='btn btn-success inline' onClick={this.reset.bind(this)}>Reset bar</button>
       </div>
     );
   }

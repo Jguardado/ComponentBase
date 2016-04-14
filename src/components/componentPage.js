@@ -26,7 +26,7 @@ export default class ComponentPage extends Component {
           <div className='scrollbar'>
             <div className='componentBox'>
               <ProgressBar />
-              <Info />
+              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleProgressBar.js'/>
             </div>
             <div className='componentBox'>
               <NavBar />

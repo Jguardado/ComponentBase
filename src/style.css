@@ -54,6 +54,7 @@ html, body {
 
 /*Progress Bar styling*/
 .progressbar {
+  margin-top: 70px;
   border-radius: 4px;
   border: 1px solid white;
 }
