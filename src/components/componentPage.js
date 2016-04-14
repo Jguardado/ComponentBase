@@ -12,6 +12,7 @@ import Dropdown from './exampleDropdown';
 import Info from './Info';
 import Header from './exampleRouters';
 import Footer from './Footer';
+import ProgressBar from './exampleProgressBar';
 
 export default class ComponentPage extends Component {
 
@@ -23,6 +24,10 @@ export default class ComponentPage extends Component {
         <div className='container main'>
         <h1 className='page-header headingtext'>Example of Useful Functions</h1>
           <div className='scrollbar'>
+            <div className='componentBox'>
+              <ProgressBar />
+              <Info />
+            </div>
             <div className='componentBox'>
               <NavBar />
               <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleNavBar.js'/>
