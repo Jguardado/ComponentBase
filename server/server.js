@@ -6,11 +6,10 @@ var config = require('../webpack.config.js');
 var request = require('request');
 var env = require('node-env-file');
 
-var env = env(__dirname + '/.env');
+var env = env(__dirname + '../.env');
 var isDevelopment = (process.env.NODE_ENV !== 'production');
 var app = express();
-
-// var isDevelopment = (process.env.NODE_ENV !== 'production');
+console.log('this is the process env', process.env.NODE_ENV);
 app.use(bodyParser());
 var port = process.env.PORT || 3000;
 app.use(express.static(__dirname + '/../'));
