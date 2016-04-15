@@ -4,12 +4,10 @@
   "description": "An outsource library of React componets built in ES6",
   "main": "app/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-server": "webpack-dev-server --config webpack-dev-server.config.js --progress --colors --port 2992 --inline",
-    "hot-dev-server": "webpack-dev-server --config webpack-hot-dev-server.config.js --hot --progress --colors --port 2992 --inline",
-    "build": "webpack --config webpack-production.config.js --progress --profile --colors",
-    "start-dev": "node lib/server-development",
-    "start": "node server/server.js"
+     "start": "nodemon server/server.js",
+     "frontend": "webpack-dev-server",
+     "build": "webpack",
+     "deploy": "",
   },
   "keywords": [
     "webpack",
