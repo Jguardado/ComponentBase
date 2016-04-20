@@ -7,7 +7,7 @@
    "start": "nodemon server/server.js",
    "frontend": "webpack-dev-server",
    "build": "webpack",
-   "deploy": "",
+   "deploy": ""
   },
   "engines": {
    "node": "5.3.0",
