@@ -4,10 +4,14 @@
   "description": "An outsource library of React componets built in ES6",
   "main": "app/app.js",
   "scripts": {
-     "start": "nodemon server/server.js",
-     "frontend": "webpack-dev-server",
-     "build": "webpack",
-     "deploy": "",
+   "start": "nodemon server/server.js",
+   "frontend": "webpack-dev-server",
+   "build": "webpack",
+   "deploy": "",
+  },
+  "engines": {
+   "node": "5.3.0",
+   "npm": "3.3.12"
   },
   "keywords": [
     "webpack",
@@ -42,10 +46,6 @@
     "webpack": "^1.8.5",
     "webpack-dev-server": "^1.14.1",
     "nodemon": "^1.9.1"
-  },
-  "engines": {
-   "node": "5.3.0",
-   "npm": "3.3.12"
   },
   "devDependencies": {
     "babel-eslint": "^3.0.1",
