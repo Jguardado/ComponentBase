@@ -6,7 +6,7 @@ var request = require('request');
 // var env = require('node-env-file');
 
 // var env = env(__dirname + '../.env');
-var isDevelopment = (process.env.NODE_ENV !== 'production');
+var isDevelopment = (process.env !== 'production');
 var app = express();
 console.log('this is the process env', process.env);
 var port = process.env.PORT || 3000;
@@ -14,7 +14,7 @@ app.use(express.static(__dirname + '/../'));
 
 
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env === 'production') {
   var static_path = path.join(__dirname, 'public');
 
   app.use(express.static(static_path))
