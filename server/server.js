@@ -11,7 +11,6 @@ var app = express();
 var port = process.env.PORT || 3000;
 app.use(express.static(__dirname + '/../'));
 
-
 if (process.env.NODE_ENV === 'production') {
   var static_path = path.join(__dirname, 'public');
   console.log('this is the static_path', static_path);
