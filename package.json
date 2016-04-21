@@ -9,6 +9,10 @@
    "build": "webpack",
    "deploy": ""
   },
+  "repository": {
+  "type": "git",
+  "url": "git+https://github.com/jguardado/ComponentBase"
+  },
   "engines": {
    "node": "5.3.0",
    "npm": "3.3.12"

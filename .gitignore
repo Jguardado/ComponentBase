@@ -1,5 +1,5 @@
 node_modules
-server/.env
+server/env
 public
 .DS_Store
 planningPhase
