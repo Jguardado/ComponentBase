@@ -6,16 +6,13 @@ var request = require('request');
 // var env = require('node-env-file');
 
 // var env = env(__dirname + '../.env');
-var isDevelopment = (process.env !== 'production');
+var isDevelopment = (process.env.NODE_ENV !== 'production');
 var app = express();
 var port = process.env.PORT || 3000;
 app.use(express.static(__dirname + '/../'));
 
-var static_path = path.join(__dirname, 'public/');
-console.log('this is the static_path', static_path);
 
-
-if (process.env === 'production') {
+if (process.env.NODE_ENV === 'production') {
   var static_path = path.join(__dirname, 'public');
   console.log('this is the static_path', static_path);
 
