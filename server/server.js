@@ -4,9 +4,9 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var config = require('../webpack.config.js');
 var request = require('request');
-var env = require('node-env-file');
+// var env = require('node-env-file');
 
-var env = env(__dirname + '../.env');
+// var env = env(__dirname + '../.env');
 var isDevelopment = (process.env.NODE_ENV !== 'production');
 var app = express();
 console.log('this is the process env', process.env.NODE_ENV);
