@@ -4,7 +4,7 @@ import Intro from './Intro';
 import Header from './exampleRouters';
 import Footer from './Footer';
 import NewComps from './addedComponents';
-import NewBlogs from './NewBlogs';
+import NewBlogs from './newBlogs';
 import OtherProjects from './reccomendedProjects';
 
 export default class Layout extends Component {
