@@ -5,6 +5,7 @@
   "main": "app/app.js",
   "scripts": {
     "start": "nodemon server/server.js",
+    "postinstall": "webpack --config ./webpack-production.config.js --progress --colors",
     "frontend": "webpack-dev-server",
     "build": "webpack",
     "deploy": ""
