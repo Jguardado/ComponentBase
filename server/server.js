@@ -8,7 +8,6 @@ var request = require('request');
 // var env = env(__dirname + '../.env');
 var isDevelopment = (process.env !== 'production');
 var app = express();
-console.log('this is the process env', process.env);
 var port = process.env.PORT || 3000;
 app.use(express.static(__dirname + '/../'));
 
@@ -16,6 +15,7 @@ app.use(express.static(__dirname + '/../'));
 
 if (process.env === 'production') {
   var static_path = path.join(__dirname, 'public');
+  console.log('this is the static_path', static_path);
 
   app.use(express.static(static_path))
     .get('/', function (req, res) {
