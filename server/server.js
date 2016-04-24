@@ -3,6 +3,8 @@ var webpack = require('webpack');
 var path = require('path');
 var config = require('../webpack.config.js');
 var request = require('request');
+var db = require('./db');
+
 // var env = require('node-env-file');
 
 // var env = env(__dirname + '../.env');
