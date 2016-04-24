@@ -2,13 +2,20 @@ var fs = require('fs');
 var path = require('path');
 var mysql = require('mysql');
 
+//Creating a user object constructor:
+var User = function (id, name, github) {
+  this.name = name;
+  this.github = github;
+  this.id = id;
+};
+
 //NOTE: Establishing connection
-var connetion = mysql.createConnection({
+var connection = mysql.createConnection({
   host: 'localhost',
   database: 'test',
 });
 
-connetion.connect(function (err) {
+connection.connect(function (err) {
   if (err) {
     console.log('Error connecting to Db', err);
     return;
@@ -17,7 +24,7 @@ connetion.connect(function (err) {
   console.log('Connection established');
 });
 
-//NOTE: creating crud functions.
+//NOTE: creating C.R.U.D. functions.
 exports.addUser = function (newUser) {
   connection.query('INSERT INTO users SET ?', newUser, function (err, res) {
     if (err) {
@@ -63,3 +70,9 @@ exports.deleteUser = function (id) {
   );
 
 };
+
+// var tommy = new User(5, 'tommy', 'tommycodes');
+//
+// console.log(tommy);
+
+// exports.addUser(tommy);
