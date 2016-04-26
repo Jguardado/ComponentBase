@@ -17,7 +17,7 @@ import ProgressBar from './exampleProgressBar';
 export default class ComponentPage extends Component {
 
   render() {
-    console.log('THIS IS SUPPOSED TO RENDER');
+    console.log('THIS IS SUPPOSED TO RENDER something');
     return (
       <div>
         <Header />

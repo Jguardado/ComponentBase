@@ -37,10 +37,13 @@ exports.addUser = function (newUser) {
 };
 
 exports.readUser = function (id) {
-  connection.query('SELECT users WHERE ID = ?', [id], function (err, res) {
+  connection.query('SELECT * FROM users WHERE id = ?', [id], function (err, res) {
       if (err) {
         console.error('read user didnt work');
       }
+
+      console.log('this is your user', res);
+      return res;
     }
   );
 
@@ -48,7 +51,7 @@ exports.readUser = function (id) {
 
 exports.updateUser = function (category, itemForUpdate, id) {
   //this needs more adjustments I'll need to identfiy what I want passed in
-  connection.query('UPDATE users SET' + category + ' = ? Where ID = ?', [itemForUpdate, id], function (err, result) {
+  connection.query('UPDATE users SET ' + category + ' = ? Where ID = ?', [itemForUpdate, id], function (err, result) {
       if (err) {
         console.error('update user did not work');
       }
@@ -62,17 +65,19 @@ exports.updateUser = function (category, itemForUpdate, id) {
 exports.deleteUser = function (id) {
   connection.query('DELETE FROM users WHERE id = ?', [id], function (err, result) {
       if (err) {
-        console.error('delete user didnt work');
+        console.error('delete user didnt work', err);
+      } else {
+        console.log('Deleted ' + result.affectedRows + ' rows');
       }
 
-      console.log('Deleted ' + result.affectedRows + ' rows');
     }
   );
 
 };
 
-// var tommy = new User(5, 'tommy', 'tommycodes');
+// exports.addUser(tommy);
+
 //
 // console.log(tommy);
 
-// exports.addUser(tommy);
+// exports.updateUser('github', 'tom_codes', 5);

@@ -4,6 +4,7 @@ var path = require('path');
 var config = require('../webpack.config.js');
 var request = require('request');
 var db = require('./db');
+var bodyparser = require('body-parser');
 
 // var env = require('node-env-file');
 
@@ -11,6 +12,9 @@ var db = require('./db');
 var isDevelopment = (process.env.NODE_ENV !== 'production');
 var app = express();
 var port = process.env.PORT || 3000;
+
+app.use(bodyparser());
+
 app.use(express.static(__dirname + '/../'));
 
 if (process.env.NODE_ENV === 'production') {
@@ -50,3 +54,21 @@ if (process.env.NODE_ENV === 'production') {
 
   app.listen(port);
 }
+
+//NOTE: Setting up url routes.
+
+app.get('/users/:id', function (req, res) {
+  console.log('this is the res/req var', res, req);
+  var store = db.readUser(req.params.id);
+
+  console.log('this is when called on server file', store);
+
+});
+
+// .then(function (result) {
+//   if (result) {
+//     res.send(result);
+//   } else {
+//     res.status(404);
+//   }
+// });

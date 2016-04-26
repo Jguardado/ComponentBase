@@ -5,7 +5,6 @@ export default class Info extends Component {
     return (
       <div className='right'>
         <p>{this.props.info}</p>
-        <code>{'import body { color: blue; }'}</code>
         <div>
           <h4><a className='gitLink' href={this.props.github}>Get the Code</a></h4>
         </div>
@@ -13,3 +12,5 @@ export default class Info extends Component {
     );
   }
 }
+
+// <code>{'import body { color: blue; }'}</code>
