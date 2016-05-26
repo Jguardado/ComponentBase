@@ -8,7 +8,7 @@ class AddedComponents extends Component {
 
   render() {
     return (
-      <div className='col-md-3 newcomp'>
+      <div className='newcomp one'>
         <legend>New Components</legend>
           <h4>
             <ul className='list-items'><a href='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleProgressBar.js'>Progress Bar</a></ul>

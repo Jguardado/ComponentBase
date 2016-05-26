@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class OtherProjects extends Component {
   render() {
     return (
-      <div className='col-md-3 newcomp'>
+      <div className='newcomp three'>
         <legend>Cool Projects</legend>
         <h4>
           <ul><a href='https://abvolt.herokuapp.com/'>HeartBeat</a></ul>

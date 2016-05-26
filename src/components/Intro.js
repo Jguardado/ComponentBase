@@ -19,8 +19,8 @@ export default class Intro extends Component {
         <a href='https://github.com/Jguardado/ComponentBase/issues'> contributions and review</a>. If there are any recommendation for best practice usage
         Ill be happy to review and integrate your suggestions into this library.</p>
 
-        <p className='headingtext tab'>For an awesome startwer kick with webpack configuarations
-        I reccomend you check out <a href='https://github.com/colinlmcdonald/react-redux-webpack'>react-redux-webpack</a> by Colin McDonald. Its a great way for anyone
+        <p className='headingtext tab'>For an awesome starter kick with webpack configurations
+        I recommend you check out <a href='https://github.com/colinlmcdonald/react-redux-webpack'>react-redux-webpack</a> by Colin McDonald. Its a great way for anyone
         to get a jump start on thir projects.</p>
       </div>
     );

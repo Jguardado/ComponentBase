@@ -18,7 +18,7 @@ import { Link } from 'react-router';
 export default class Header extends Component {
     render() {
       return (
-        <div className='navbar head'>
+        <div className='navbar navbar-default navbar-fixed-top head'>
           <h5>
           <Link to='/' className='col-md-1'>Home</Link>
           <a className='col-md-1' href='https://github.com/Jguardado'>GitHub</a>

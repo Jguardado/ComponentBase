@@ -15,9 +15,11 @@ export default class Layout extends Component {
         <Header />
         <Banner />
         <Intro />
-        <NewComps />
-        <NewBlogs />
-        <OtherProjects />
+        <div className='three-boxes'>
+          <NewComps />
+          <NewBlogs />
+          <OtherProjects />
+        </div>
         <Footer />
       </div>
     );
