@@ -13,9 +13,16 @@ html, body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e2b4', endColorstr='#003200',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   height: 450px;
 }
+
 .jumobotext {
   font-family: 'Berkshire Swash', cursive;
   color: black;
+}
+
+.headerlogo {
+  position: absolute;
+  right: 0;
+  bottom: 2px;
 }
 
 
@@ -36,6 +43,7 @@ html, body {
 .three-boxes {
   position: relative;
 }
+
 .newcomp {
   height: 200px;
   border-radius: 4px;
@@ -72,6 +80,9 @@ html, body {
 .list-items {
   margin-bottom: 5px;
 }
+
+
+
 
 /*Progress Bar styling*/
 .progressbar {

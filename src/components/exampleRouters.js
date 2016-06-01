@@ -16,17 +16,59 @@ import { Link } from 'react-router';
 //link to seperate page for components
 
 export default class Header extends Component {
+
+    constructor(props) {
+      super(props);
+
+      this.state = {
+        selected:'',
+      };
+
+      this.setSelected = this.setSelected.bind(this);
+      this.addActive = this.addActive.bind(this);
+    }
+
+    addActive(selected) {
+      if (selected === this.state.selected) {
+        return 'nav-item active';
+      } else {
+        return 'nav-item';
+      }
+    }
+
+    setSelected(value) {
+      console.log('selected is being called');
+      this.setState({ selected: value });
+    }
+
     render() {
+      console.log('problems');
       return (
         <div className='navbar navbar-default navbar-fixed-top head'>
-          <h5>
-          <Link to='/' className='col-md-1'>Home</Link>
-          <a className='col-md-1' href='https://github.com/Jguardado'>GitHub</a>
-          <a className='col-md-1' href='https://medium.com/@juanguardado'>Blog</a>
-          <Link to='/component' className='col-md-1'>Components</Link>
-          </h5>
-          <h4 className='col-md-offset-10 jumobotext'>ComponentBase</h4>
+          <ui className="nav navbar-nav">
+            <li
+              className={this.addActive('home')}
+              onClick={this.setSelected.bind(this, 'home')}>
+                <Link to='/' className='nav-link'>Home</Link>
+            </li>
+            <li
+              className={this.addActive('github')}
+              onClick={this.setSelected.bind(this, 'github')}>
+                <a className='nav-link' href='https://github.com/Jguardado'>GitHub</a>
+            </li>
+            <li
+              className={this.addActive('blog')}
+              onClick={this.setSelected.bind(this, 'blog')}>
+                <a className='nav-link' href='https://medium.com/@juanguardado'>Blog</a>
+            </li>
+            <li
+              className={this.addActive('components')}
+              onClick={this.setSelected.bind(this, 'components')}>
+                <Link to='/component' className='nav-link'>Components</Link>
+            </li>
+          </ui>
+          <h4 className='navbar-brand jumobotext headerlogo'>ComponentBase</h4>
         </div>
       );
     }
-  }
+}
