@@ -24,8 +24,8 @@ export default class Header extends Component {
         selected:'',
       };
 
-      // this.setSelected = this.setSelected.bind(this);
-      // this.addActive = this.addActive.bind(this);
+      this.setSelected = this.setSelected.bind(this);
+      this.addActive = this.addActive.bind(this);
     }
 
     addActive(selected) {
