@@ -8,8 +8,8 @@ export default class App extends Component {
   render() {
     return (
       <Router history={hashHistory}>
-        <Route path='/' component={Layout}/>
-        <Route path='/component' component={ComponentPage}/>
+        <Route path="/" component={Layout}/>
+        <Route path="/component" component={ComponentPage}/>
       </Router>
     );
   }

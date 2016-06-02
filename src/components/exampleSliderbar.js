@@ -6,6 +6,12 @@ export default class SliderBar extends Component {
 
     this.state = {
       value: 0,
+      input: {
+        min: 0,
+        max: 10,
+        step: 1,
+        id:'fader',
+      },
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -21,21 +27,18 @@ export default class SliderBar extends Component {
       <div className='center'>
       <legend className='headingtext'>Example Slider Bar</legend>
         <div className="barSlider">
-          <input type="range" min='0'
-            max='10'
-            step="1"
-            id="fader"
-            onChange={
-               this.handleChange
-            }
-            >
+          <input type="range" min={this.state.input.min}
+            max={this.state.input.max}
+            step={this.state.input.step}
+            id={this.state.input.id}
+            onChange={this.handleChange}>
+            </input>
             <datalist id="steplist">
-            <output id="volume">0</output>
+              <output id="volume">0</output>
             </datalist>
-          </input>
-          <span>{this.state.value}</span>
+            <h1>{this.state.value}</h1>
         </div>
-        </div>
+      </div>
     );
 
   }

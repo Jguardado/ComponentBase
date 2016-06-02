@@ -24,11 +24,12 @@ export default class Header extends Component {
         selected:'',
       };
 
-      this.setSelected = this.setSelected.bind(this);
-      this.addActive = this.addActive.bind(this);
+      // this.setSelected = this.setSelected.bind(this);
+      // this.addActive = this.addActive.bind(this);
     }
 
     addActive(selected) {
+      console.log('inside addactive', selected, this.state.selected);
       if (selected === this.state.selected) {
         return 'nav-item active';
       } else {
@@ -37,7 +38,7 @@ export default class Header extends Component {
     }
 
     setSelected(value) {
-      console.log('selected is being called');
+      console.log('selected is being called on', value);
       this.setState({ selected: value });
     }
 
@@ -46,29 +47,21 @@ export default class Header extends Component {
       return (
         <div className='navbar navbar-default navbar-fixed-top head'>
           <ui className="nav navbar-nav">
-            <li
-              className={this.addActive('home')}
-              onClick={this.setSelected.bind(this, 'home')}>
-                <Link to='/' className='nav-link'>Home</Link>
+            <li className={this.addActive('home')} onClick={this.setSelected.bind(this, 'home')}>
+            <Link to='/' className='nav-link'>Home</Link>
             </li>
-            <li
-              className={this.addActive('github')}
-              onClick={this.setSelected.bind(this, 'github')}>
-                <a className='nav-link' href='https://github.com/Jguardado'>GitHub</a>
+            <li className={this.addActive('github')} onClick={this.setSelected.bind(this, 'github')}>
+            <a className='nav-link' href='https://github.com/Jguardado'>GitHub</a>
             </li>
-            <li
-              className={this.addActive('blog')}
-              onClick={this.setSelected.bind(this, 'blog')}>
-                <a className='nav-link' href='https://medium.com/@juanguardado'>Blog</a>
+            <li className={this.addActive('blog')} onClick={this.setSelected.bind(this, 'blog')}>
+            <a className='nav-link' href='https://medium.com/@juanguardado'>Blog</a>
             </li>
-            <li
-              className={this.addActive('components')}
-              onClick={this.setSelected.bind(this, 'components')}>
-                <Link to='/component' className='nav-link'>Components</Link>
+            <li className={this.addActive('components')} onClick={this.setSelected.bind(this, 'components')}>
+            <Link to='/component' className='nav-link'>Components</Link>
             </li>
           </ui>
           <h4 className='navbar-brand jumobotext headerlogo'>ComponentBase</h4>
         </div>
       );
-    }
-}
+    };
+};

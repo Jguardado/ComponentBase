@@ -47,7 +47,7 @@ if (process.env.NODE_ENV === 'production') {
       if (err) {
         console.log(err);
       } else {
-        console.log('Listening at localhost:3001');
+        console.log('Listening at localhost:3001 development');
       }
 
     });
@@ -57,13 +57,13 @@ if (process.env.NODE_ENV === 'production') {
 
 //NOTE: Setting up url routes.
 
-app.get('/users/:id', function (req, res) {
-  console.log('this is the res/req var', res, req);
-  var store = db.readUser(req.params.id);
-
-  console.log('this is when called on server file', store);
-
-});
+// app.get('/component', function (req, res) {
+//   console.log('this is the res/req var', res, req);
+//   var store = db.readUser(req.params.id);
+//
+//   console.log('this is when called on server file', store);
+//
+// });
 
 // .then(function (result) {
 //   if (result) {
