@@ -5,8 +5,8 @@ export default class Intro extends Component {
   render() {
     return (
       <div className='intro mainTwo'>
-        <p className='headingtext tab'>ComponentBase is a library compiled of commonly
-        used a <Link to='/component'>components</Link>. It is a tool for Engineers. Each
+        <p className='headingtext tab'>ComponentBase is a library of commonly
+        used React <Link to='/component'>components</Link>. It is a tool for Engineers. Each
         component is designed to be easily integrated into your own applications.</p>
 
         <p className='headingtext tab'>The goal is to provide readily compatible code
