@@ -9,7 +9,7 @@ import SliderBar from '../examples/exampleSliderbar';
 import NavBar from '../examples/exampleNavBar';
 import Picture from '../examples/exampleImg';
 import Dropdown from '../examples/exampleDropdown';
-import Info from './Info';
+import Info from '../../containers/appStructure/info';
 import Header from '../examples/exampleRouters';
 import Footer from './Footer';
 import ProgressBar from '../examples/exampleProgressBar';

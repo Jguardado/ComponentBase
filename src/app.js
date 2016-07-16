@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
-import ComponentPage from './appStructure/componentPage';
-import Layout from './appStructure/layout';
+import ComponentPage from './components/appStructure/componentPage';
+import Layout from './components/appStructure/layout';
 
 export default class App extends Component {
 
