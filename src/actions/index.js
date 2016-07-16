@@ -3,7 +3,7 @@ import { SELECT_COMP } from './types';
 
 export function selectComp(string) {
   return {
-    type: 'SELECT_COMP',
+    type: SELECT_COMP,
     payload: string,
   };
 }

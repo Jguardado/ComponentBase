@@ -1,8 +1,7 @@
 import * as actions from '../actions/types';
 
-console.log('imported actions in reducer', actions);
-
-export default function selectedReducer(state = {}, actions) {
+export default function selectedReducer(state = {}, action) {
+  console.log('inside reducer', actions);
   if (actions.SELECT_COMP) {
     console.log('moving');
   }

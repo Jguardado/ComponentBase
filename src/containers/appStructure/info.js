@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import * as actionCreators from '../../actions/index';
 
 class Info extends Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class Info extends Component {
       <div className='right'>
         <p>Soon to come</p>
         <div>
-          <button className="btn-primary">Select</button>
+          <button onClick={this.props.selectComp} className="btn-primary">Select</button>
           <h4><a className='gitLink' href={this.props.github}>Get the Code</a></h4>
         </div>
       </div>
@@ -31,7 +32,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatch(dispatch) {
-  return bindActionCreators(dispatch);
+  return bindActionCreators(actionCreators, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatch)(Info);

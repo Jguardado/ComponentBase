@@ -6,9 +6,9 @@ import ComponentPage from './components/appStructure/componentPage';
 import Layout from './components/appStructure/layout';
 import rootreducer from './reducers';
 
-console.log('this is the reducer', rootreducer);
-
-let store = createStore(rootreducer);
+let store = createStore(rootreducer, {},
+  window.devToolsExtension ? window.devToolsExtension() : undefined
+);
 
 export default class App extends Component {
 
