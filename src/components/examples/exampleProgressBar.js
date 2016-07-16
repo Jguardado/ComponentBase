@@ -20,7 +20,6 @@ class ProgressBar extends Component {
 
     setInterval(function () {
       if (this.state.completed < 100) {
-        console.log('we got this far');
         this.setState({ completed: this.state.completed + 5 });
       }
 

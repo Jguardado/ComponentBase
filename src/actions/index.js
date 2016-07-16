@@ -1,9 +1,9 @@
-import * as actions from './types';
+import { SELECT_COMP } from './types';
+// console.log('this is the imported types', types);
 
-export function selectComp() {
-  console.log('selectComp is called');
+export function selectComp(string) {
   return {
     type: 'SELECT_COMP',
-    payload: isSelected,
+    payload: string,
   };
 }
