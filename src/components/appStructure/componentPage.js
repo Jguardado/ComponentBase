@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import HideShow from './exampleHideShow';
-import Contructor from './constructorFunc';
-import Buttons from './exampleButton';
-import InputForm from './exampleInputForm';
-import InputOnClick from './exampleInputOnClick';
-import Textbox from './exampleTextbox';
-import SliderBar from './exampleSliderbar';
-import NavBar from './exampleNavBar';
-import Picture from './exampleImg';
-import Dropdown from './exampleDropdown';
+import HideShow from '../examples/exampleHideShow';
+import Contructor from '../examples/constructorFunc';
+import Buttons from '../examples/exampleButton';
+import InputForm from '../examples/exampleInputForm';
+import InputOnClick from '../examples/exampleInputOnClick';
+import Textbox from '../examples/exampleTextbox';
+import SliderBar from '../examples/exampleSliderbar';
+import NavBar from '../examples/exampleNavBar';
+import Picture from '../examples/exampleImg';
+import Dropdown from '../examples/exampleDropdown';
 import Info from './Info';
-import Header from './exampleRouters';
+import Header from '../examples/exampleRouters';
 import Footer from './Footer';
-import ProgressBar from './exampleProgressBar';
+import ProgressBar from '../examples/exampleProgressBar';
 
 export default class ComponentPage extends Component {
 

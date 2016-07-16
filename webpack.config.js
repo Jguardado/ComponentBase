@@ -1,65 +1,31 @@
 module.exports = {
-  entry: [
-    './src/index.js',
-  ],
-  output: {
-    path: __dirname,
-    publicPath: '/',
-    filename: 'public/bundle.js',
-  },
-  module: {
-    loaders: [
-      {
-        test: /(\.js$)|(\.jsx$)/,
-        exclude: /node_modules/,
-        loaders: [
-          'babel-loader',
-        ],
+    entry: ['./global.js', './index.js'],
+    output: {
+        path: __dirname,
+        filename: 'bundle.js',
       },
-      {
-        test: /\.json$/,
-        loaders: ['json'],
-      },
-      {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader',
-      },
-      {
-        test: /\.png$/,
-        loader: 'url-loader?limit=100000',
-      },
-      {
-        test: /\.(jpg|png|gif|svg)$/,
-        loader: 'file-loader',
-      },
-      {
-        test: /\.jade$/,
-        loaders: ['jade'],
-      },
-      {
-        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'file',
-      },
-      {
-        test: /\.(woff|woff2)$/,
-        loader:'url?prefix=font/&limit=5000',
-      },
-      {
-        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'url?limit=10000&mimetype=application/octet-stream',
-      },
-      {
-        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'url?limit=10000&mimetype=image/svg+xml',
-      },
+    module: {
+      preLoaders: [
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: 'jshint-loader',
 
-    ],
-  },
-  resolve: {
-    extensions: ['', '.js', '.jsx'],
-  },
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './',
-  },
-};
+        },
+      ],
+      loaders: [
+          {
+            test: [/\.js$/, /\.es6$/],
+            exclude: /node_modules/,
+            loader: 'babel-loader',
+            query: {
+              presets: ['react', 'es2015'],
+            },
+          },
+      ],
+    },
+    resolve: {
+      extensions: ['', '.js', '.es6', 'jsx'],
+    },
+    watch: true,
+  };
