@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actionCreators from '../../actions/index';
 import HideShow from '../examples/exampleHideShow';
 import Contructor from '../examples/constructorFunc';
 import Buttons from '../examples/exampleButton';
@@ -13,10 +16,12 @@ import Info from '../../containers/appStructure/info';
 import Header from '../examples/exampleRouters';
 import Footer from './Footer';
 import ProgressBar from '../examples/exampleProgressBar';
+import SelectedComponent from '../../containers/appStructure/selectedComponent';
 
-export default class ComponentPage extends Component {
+class ComponentPage extends Component {
 
-  render() {
+  renderFullPage() {
+    console.log('rendering full page', this.props);
     return (
       <div>
         <Header />
@@ -25,7 +30,7 @@ export default class ComponentPage extends Component {
           <div className='scrollbar'>
             <div className='componentBox'>
               <ProgressBar />
-              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleProgressBar.js'/>
+              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleProgressBar.js' comp='progress_bar'/>
             </div>
             <div className='componentBox'>
               <NavBar />
@@ -72,4 +77,34 @@ export default class ComponentPage extends Component {
       </div>
     );
   }
+
+  renderSelectedComp() {
+    console.log('is selectedComp being called', this.props);
+    return (
+      <div>
+        <Header />
+        <div className='container main'>
+        <h1 className='page-header headingtext'>Example of Useful Functions</h1>
+          <SelectedComponent/>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  render() {
+    console.log('component page rerendering');
+    if (this.props.selected !== 'none') {
+      return this.renderSelectedComp();;
+
+    } else {
+      return this.renderFullPage();
+    }
+  }
 }
+
+function mapStateToProps(state) {
+  return { selected: state.selected };
+}
+
+export default connect(mapStateToProps)(ComponentPage);

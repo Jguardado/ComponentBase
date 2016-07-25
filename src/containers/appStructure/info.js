@@ -8,18 +8,24 @@ class Info extends Component {
     super(props);
 
     this.state = {
-      selected: '',
+      selected: false,
     };
+    this.makeSelect = this.makeSelect.bind(this);
+  }
+
+  makeSelect() {
+    this.props.selectComp(this.props.comp);
   }
 
   render() {
-    console.log('these are the props', this.props);
 
     return (
       <div className='right'>
-        <p>Soon to come</p>
+        <p>{this.props.selected}</p>
         <div>
-          <button onClick={this.props.selectComp} className="btn-primary">Select</button>
+          <button
+            onClick={this.makeSelect}
+            className="btn btn-primary">Select</button>
           <h4><a className='gitLink' href={this.props.github}>Get the Code</a></h4>
         </div>
       </div>

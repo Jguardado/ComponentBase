@@ -9,6 +9,7 @@ class ProgressBar extends Component {
     this.state = {
       completed: 0,
       color: '#0BD318',
+      comp: 'progress_bar',
     };
 
     this.increaseBar = this.increaseBar.bind(this);

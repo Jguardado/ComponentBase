@@ -30,6 +30,7 @@
   "dependencies": {
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.9.1",
     "body-parser": "^1.15.2",
     "bootstrap": "^3.3.6",
     "classnames": "^2.2.5",
