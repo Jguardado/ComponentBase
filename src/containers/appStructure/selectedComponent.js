@@ -19,7 +19,7 @@ class SelectComponent extends Component {
 }
 
 function mapStateToProps(state) {
-  return { selected: state.selected };
+  return state.selected;
 }
 
 function mapDispatchtoProps(dispatch) {

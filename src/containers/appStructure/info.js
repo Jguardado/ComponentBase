@@ -34,7 +34,7 @@ class Info extends Component {
 }
 
 function mapStateToProps(state) {
-  return { selected: state.selected };
+  return state.selected;
 }
 
 function mapDispatch(dispatch) {

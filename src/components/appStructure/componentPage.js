@@ -104,7 +104,7 @@ class ComponentPage extends Component {
 }
 
 function mapStateToProps(state) {
-  return { selected: state.selected };
+  return state.selected;
 }
 
 export default connect(mapStateToProps)(ComponentPage);
