@@ -9,6 +9,7 @@ class ProgressBar extends Component {
     this.state = {
       completed: 0,
       color: '#0BD318',
+      comp: 'progress_bar',
     };
 
     this.increaseBar = this.increaseBar.bind(this);
@@ -20,7 +21,6 @@ class ProgressBar extends Component {
 
     setInterval(function () {
       if (this.state.completed < 100) {
-        console.log('we got this far');
         this.setState({ completed: this.state.completed + 5 });
       }
 

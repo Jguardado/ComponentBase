@@ -1,7 +1,6 @@
-import {combinedReducers} from 'redux';
+import { combineReducers } from 'redux';
+import selectedReducer from './app-reducers';
 
-const rootReducer = combinedReducers({
-
+export default combineReducers({
+  selected: selectedReducer,
 });
-
-export default rootReducer;
