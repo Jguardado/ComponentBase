@@ -98,7 +98,7 @@ class ComponentPage extends Component {
 
   render() {
     console.log('component page rerendering', this.props);
-    if (this.props.selected) {
+    if (this.props.selected !== 'none') {
       return this.renderSelectedComp();
 
     } else {

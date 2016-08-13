@@ -166,6 +166,17 @@ html, body {
   border: solid 1px;
 }
 
+/*Styling for selected component */
+.spacing {
+  position: relative;
+}
+
+.leftCorner {
+  position: relative;
+  bottom: 5px;
+  left: 80%;
+}
+
 
 
 /*Universal Styling*/

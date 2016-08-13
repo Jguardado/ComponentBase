@@ -10,9 +10,11 @@ class SelectComponent extends Component {
 
   render() {
     return (
-      <div>
-        <h1>This is the selected</h1>
-        <button onClick={this.props.deselect}>Return to Main</button>
+      <div className="componentBox spacing">
+        <h3>We are working on getting you a forum. In the mean time please feel free to got commet on our github issues pages</h3>
+        <span className="">
+          <button className="btn btn-primary leftCorner" onClick={this.props.deselect}>Return to Main</button>
+        </span>
       </div>
     );
   }

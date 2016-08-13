@@ -21,7 +21,6 @@ class Info extends Component {
 
     return (
       <div className='right'>
-        <p>{this.props.selected}</p>
         <div>
           <button
             onClick={this.makeSelect}
