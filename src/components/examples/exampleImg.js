@@ -10,7 +10,7 @@ export default class Picture extends Component {
     return (
       <div className='center'>
         <legend className='headingtext'>Example Picture</legend>
-        <img className='picture' src='/src/images/myFace.jpg'/>
+        <img className='picture' src='/src/images/myFace-min.jpg'/>
       </div>
     );
   }
