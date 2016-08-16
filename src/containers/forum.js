@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import ExampleTextBox from '../exampleTextbox.js';
 
 class Forum extends Component {
@@ -10,8 +10,8 @@ class Forum extends Component {
   render () {
     return (
       <div>
-        <CommentFeed />
         <ExampleTextBox />
+        <CommentFeed />
       </div>
     );
   }
