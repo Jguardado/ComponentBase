@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import DateUtilities from './DateUtilities';
+import { clone, moveToDayOfWeek } from './DateUtilities';
 
 class Weeks extends Component {
 
@@ -8,8 +8,8 @@ class Weeks extends Component {
     console.log('inside constructor');
 
     this.state = {
-      view: DateUtilities.clone(this.props.view),
-      other: DateUtilities.clone(this.props.view),
+      view: clone(this.props.view),
+      other: clone(this.props.view),
       sliding: null,
     };
 
@@ -26,7 +26,7 @@ class Weeks extends Component {
   onTransitionEnd() {
     this.setState({
       sliding: null,
-      view: DateUtilities.clone(this.state.other),
+      view: clone(this.state.other),
     });
 
     this.props.onTransitionEnd();
@@ -34,16 +34,16 @@ class Weeks extends Component {
 
   getWeekStartDates(view) {
     view.setDate(1);
-    view = DateUtilities.moveToDayOfWeek(DateUtilities.clone(view), 0);
+    view = moveToDayOfWeek(clone(view), 0);
 
-    const current = DateUtilities.clone(view);
+    const current = clone(view);
     current.setDate(current.getDate() + 7);
 
     const starts = [view];
     const month = current.getMonth();
 
     while (current.getMonth() === month) {
-      starts.push(DateUtilities.clone(current));
+      starts.push(clone(current));
       current.setDate(current.getDate() + 7);
     }
 
@@ -53,7 +53,7 @@ class Weeks extends Component {
   moveTo(view, isForward) {
     this.setState({
       sliding: isForward ? 'left' : 'right',
-      other: DateUtilities.clone(view),
+      other: clone(view),
     });
   }
 
