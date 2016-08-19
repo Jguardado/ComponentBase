@@ -23,7 +23,7 @@ let store = createStore(rootreducer, {},
   window.devToolsExtension ? window.devToolsExtension() : undefined
 );
 
-console.log('the store');
+// console.log('the store');
 
 export default class App extends Component {
 

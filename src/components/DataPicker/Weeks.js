@@ -1,17 +1,18 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import Week from "./Week";
 import { clone, moveToDayOfWeek } from './DateUtilities';
 
 class Weeks extends Component {
 
   constructor(props) {
     super(props);
-    console.log('inside constructor');
 
     this.state = {
       view: clone(this.props.view),
       other: clone(this.props.view),
       sliding: null,
     };
+    console.log("current: ", this.refs);
 
     this.onTransitionEnd = this.onTransitionEnd.bind(this);
     this.getWeekStartDates = this.getWeekStartDates.bind(this);
@@ -61,6 +62,7 @@ class Weeks extends Component {
     const starts = this.getWeekStartDates(view);
     const month = starts[1].getMonth();
 
+    return console.log("days to come");
     return (
       starts.map(function (s, i) {
         return (
@@ -82,8 +84,6 @@ class Weeks extends Component {
     const outcome = 'current' + (this.state.sliding ? (' sliding ' + this.state.sliding) : '');
     const outcomeTwo = 'other' + (this.state.sliding ? (' sliding' + this.state.sliding) : '');
 
-    console.log('begining to render');
-
     return (
       <div className='weeks'>
         <div className={outcome}>
@@ -97,3 +97,12 @@ class Weeks extends Component {
   }
 
 }
+
+export default Weeks
+
+// <div className={outcome}>
+//   {this.renderWeeks(this.state.view)}
+// </div>
+// <div className={outcomeTwo}>
+//   {this.renderWeeks(this.state.other)}
+// </div>

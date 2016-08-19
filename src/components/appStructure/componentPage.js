@@ -25,7 +25,7 @@ class ComponentPage extends Component {
   }
 
   renderFullPage() {
-    console.log('rendering full page', this.props);
+    // console.log('rendering full page', this.props);
     //TODO: Build this correctly with React-Router
     return (
       <div>
@@ -102,7 +102,7 @@ class ComponentPage extends Component {
   }
 
   render() {
-    console.log('component page rerendering', this.props);
+    // console.log('component page rerendering', this.props);
     if (this.props.selected !== 'none') {
       return this.renderSelectedComp();
 
