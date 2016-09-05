@@ -17,6 +17,7 @@ import Header from '../examples/exampleRouters';
 import Footer from './Footer';
 import ProgressBar from '../examples/exampleProgressBar';
 import SelectedComponent from '../../containers/appStructure/selectedComponent';
+import selected from '../../reducers';
 
 class ComponentPage extends Component {
   constructor(props) {
@@ -24,7 +25,6 @@ class ComponentPage extends Component {
   }
 
   renderFullPage() {
-    console.log('rendering full page', this.props);
     //TODO: Build this correctly with React-Router
     return (
       <div>
@@ -98,7 +98,7 @@ class ComponentPage extends Component {
 
   render() {
     console.log('component page rerendering', this.props);
-    if (this.props.selected !== 'none') {
+    if (this.props.selected) {
       return this.renderSelectedComp();
 
     } else {
@@ -107,8 +107,9 @@ class ComponentPage extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return state.selected;
+function mapStateToProps({ selected }) {
+  console.log('this is state: ', selected);
+  return { selected };
 }
 
 export default connect(mapStateToProps)(ComponentPage);

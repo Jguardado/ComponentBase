@@ -14,7 +14,7 @@ class Info extends Component {
   }
 
   makeSelect() {
-    this.props.selectComp(this.props.comp);
+    this.props.selectComp(true);
   }
 
   render() {

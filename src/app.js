@@ -23,8 +23,7 @@ let store = createStore(rootreducer, {},
   window.devToolsExtension ? window.devToolsExtension() : undefined
 );
 
-console.log('the store');
-
+//TODO: This needs to be abstacted and moved into a routes folder/page
 export default class App extends Component {
 
   render() {

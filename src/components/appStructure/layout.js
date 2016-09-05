@@ -7,6 +7,9 @@ import NewComps from './addedComponents';
 import NewBlogs from './newBlogs';
 import OtherProjects from './reccomendedProjects';
 
+
+//TODO: Layout needs to be a universal thing header and footer should be present in every page
+//consider moving these components to the app level for now as Layout become reconfigured
 export default class Layout extends Component {
 
   render() {
