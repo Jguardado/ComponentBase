@@ -20,9 +20,6 @@ import SelectedComponent from '../../containers/appStructure/selectedComponent';
 import Calendar from '../DataPicker';
 
 class ComponentPage extends Component {
-  constructor(props) {
-    super(props);
-  }
   // <div className='componentBox'>
   //   <Calendar />
   //   <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleProgressBar.js' comp='progress_bar'/>
@@ -101,8 +98,9 @@ class ComponentPage extends Component {
   }
 
   render() {
-    console.log('component page rerendering', this.props);
-    if (this.props.selected) {
+    const { selected } = this.props;
+
+    if (selected.selected) {
       return this.renderSelectedComp();
 
     } else {
@@ -111,9 +109,9 @@ class ComponentPage extends Component {
   }
 }
 
+//NOTE: state is currently read-only prop in this component
 function mapStateToProps({ selected }) {
-  console.log('this is state: ', selected);
-  return { selected };
+  return { selected: selected };
 }
 
 export default connect(mapStateToProps)(ComponentPage);

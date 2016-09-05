@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
+// NOTE: this is an interesting pattern. It allows for you to pull in all of the
+// actions (without naming) and mapthem to dispatch. However this is reliant on
+// the fact that all of teh actions are generated in teh same file
 import * as actionCreators from '../../actions/index';
 
 class Info extends Component {
@@ -18,7 +22,7 @@ class Info extends Component {
   }
 
   render() {
-
+    // console.log('props in info page; ', this.props);
     return (
       <div className='right'>
         <div>
@@ -32,12 +36,8 @@ class Info extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return state.selected;
-}
-
 function mapDispatch(dispatch) {
   return bindActionCreators(actionCreators, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatch)(Info);
+export default connect(null, mapDispatch)(Info);

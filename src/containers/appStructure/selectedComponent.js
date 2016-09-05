@@ -4,31 +4,38 @@ import { Link } from 'react-router';
 import { bindActionCreators } from 'redux';
 import { deselect } from '../../actions/index';
 
+console.log();
 
-//TODO: Integrate a codemirror module in to this component to give the user
+//TODO: Integrate a codemirror module into this component to give the user
 //the option to view code directly
+
 class SelectComponent extends Component {
   constructor(props) {
     super(props);
-    console.log('test in SelectComponent: ', deselect);
+
+    this.unSelect = this.unSelect.bind(this);
   }
 
   unSelect() {
     const { deselect } = this.props;
-    console.log('unSelect was called: ', deselect);
     deselect(false);
   }
 
   render() {
+    console.log('selected', this.props);
     return (
       <div className="componentBox spacing">
         <pre><code> const freedom != 'free';
           return 'the rest of the components'
          </code></pre>
-        <h3>We are working on getting you a forum. In the mean time please feel free to got commet on our github issues pages</h3>
+        <h3>We are working on getting you a forum. In the mean time please feel free to go comment on our github issues pages</h3>
         <span className="">
-          <Link to='/component'>
-            <button className="btn btn-primary leftCorner" onClick={this.unSelect.bind(this)}>Return to Main</button>
+          <Link to='/components'>
+            <button
+              className="btn btn-primary leftCorner"
+              onClick={this.unSelect}>
+              Return to Main
+            </button>
           </Link>
         </span>
       </div>
@@ -36,8 +43,8 @@ class SelectComponent extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return state.selected;
+function mapStateToProps({ selected }) {
+  return { selected };
 }
 
 function mapDispatchtoProps(dispatch) {
