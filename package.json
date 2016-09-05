@@ -2,12 +2,11 @@
   "name": "ComponentBase",
   "version": "0.0.0",
   "description": "An open-source library of React components built in ES6",
-  "main": "app/app.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "nodemon server",
     "frontend": "webpack-dev-server",
     "build": "webpack",
-    "deploy": ""
+    "postinstall": "node deploy"
   },
   "repository": {
     "type": "git",
@@ -55,6 +54,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "devDependencies": {
+    "nodemon": "^1.10.2",
     "babel-core": "^6.14.0",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.5",
