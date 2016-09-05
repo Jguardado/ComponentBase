@@ -18,7 +18,7 @@ export default class Intro extends Component {
 
         <p className='headingtext tab'>This library is a work in progress. I encourage all Engineers,
         seasoned and novice, to add-in this effort. If there is a comment you would like to add, feel free
-        to make a pull request. Being an advocate of open-source I welcome
+        to make a pull request. Being an advocate of open-source I welcome 
         <a href='https://github.com/Jguardado/ComponentBase/issues'>contributions and review</a>.
         I will be happy to review and integrate your suggestions into this library.                                        </p>
 

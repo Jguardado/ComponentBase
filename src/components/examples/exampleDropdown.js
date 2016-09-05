@@ -27,11 +27,11 @@ export default class Dropdown extends Component {
 
   select(item) {
     //this is where you would pass the selected item to your models
-    console.log('this is supposed to be item', item);
+    // console.log('this is supposed to be item', item);
   }
 
   makeVisable(btnName) {
-    console.log('mouse over activated');
+    // console.log('mouse over activated');
     this.setState({ listVisible: !this.state.listVisible }, console.log(this.state.listVisible));
   }
 

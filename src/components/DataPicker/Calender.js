@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import MonthHeader from './MonthHeader';
 import WeekHeader from './WeekHeader';
-import Weeks, { moveTo }from './Weeks';
+import Weeks, { moveTo } from './Weeks';
+// import Weeks from './Weeks';
 
 export default class Calendar extends Component {
 
@@ -14,6 +15,7 @@ export default class Calendar extends Component {
   }
 
   render() {
+    console.log("props in Calendar: ", this.props);
     const outcome = 'calendar' + this.props.visible ? ' visible' : '';
     console.log('starting to render');
     return (

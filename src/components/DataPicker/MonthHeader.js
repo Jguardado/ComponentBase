@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import DateUtilities from './DateUtilities';
+import { clone, toMonthAndYearString } from './DateUtilities';
 
 export default class MonthHeader extends Component {
 
   constructor(props) {
     super(props);
 
-    return {
-      view: DateUtilities.clone(this.props.view),
+    this.state = {
+      view: clone(this.props.view),
       enabled: true,
     };
 
@@ -18,13 +18,13 @@ export default class MonthHeader extends Component {
   }
 
   moveBackward() {
-    var view = DateUtilities.clone(this.state.view);
+    var view = clone(this.state.view);
     view.setMonth(view.getMonth() - 1);
     this.move(view, false);
   }
 
   moveForward() {
-    var view = DateUtilities.clone(this.state.view);
+    var view = clone(this.state.view);
     view.setMonth(view.getMonth() + 1);
     this.move(view, true);
   }
@@ -47,19 +47,19 @@ export default class MonthHeader extends Component {
   }
 
   render() {
-    var enabled = this.state.enabled;
+    // var enabled = this.state.enabled;
     return (
       <div className='month-header'>
         <i onClick={this.moveBackward} />
-          <span>{DateUtilities.toMonthAndYearString(this.state.view)}</span>
+          <span>{toMonthAndYearString(this.state.view)}</span>
         <i onClick={this.moveForward} />
       </div>
-
     );
-
   }
-
 }
+
+
+
 
 // React.createElement('i', { className: (enabled ? '' : ' disabled'), onClick: this.moveBackward }, String.fromCharCode(9664)),
 // React.createElement('span', null, DateUtilities.toMonthAndYearString(this.state.view)),

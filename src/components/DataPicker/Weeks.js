@@ -1,17 +1,18 @@
-import React, {Component} from 'react';
-import DateUtilities from './DateUtilities';
+import React, { Component } from 'react';
+import Week from "./Week";
+import { clone, moveToDayOfWeek } from './DateUtilities';
 
 class Weeks extends Component {
 
   constructor(props) {
     super(props);
-    console.log('inside constructor');
 
     this.state = {
-      view: DateUtilities.clone(this.props.view),
-      other: DateUtilities.clone(this.props.view),
+      view: clone(this.props.view),
+      other: clone(this.props.view),
       sliding: null,
     };
+    console.log("current: ", this.refs);
 
     this.onTransitionEnd = this.onTransitionEnd.bind(this);
     this.getWeekStartDates = this.getWeekStartDates.bind(this);
@@ -26,7 +27,7 @@ class Weeks extends Component {
   onTransitionEnd() {
     this.setState({
       sliding: null,
-      view: DateUtilities.clone(this.state.other),
+      view: clone(this.state.other),
     });
 
     this.props.onTransitionEnd();
@@ -34,16 +35,16 @@ class Weeks extends Component {
 
   getWeekStartDates(view) {
     view.setDate(1);
-    view = DateUtilities.moveToDayOfWeek(DateUtilities.clone(view), 0);
+    view = moveToDayOfWeek(clone(view), 0);
 
-    const current = DateUtilities.clone(view);
+    const current = clone(view);
     current.setDate(current.getDate() + 7);
 
     const starts = [view];
     const month = current.getMonth();
 
     while (current.getMonth() === month) {
-      starts.push(DateUtilities.clone(current));
+      starts.push(clone(current));
       current.setDate(current.getDate() + 7);
     }
 
@@ -53,7 +54,7 @@ class Weeks extends Component {
   moveTo(view, isForward) {
     this.setState({
       sliding: isForward ? 'left' : 'right',
-      other: DateUtilities.clone(view),
+      other: clone(view),
     });
   }
 
@@ -61,6 +62,7 @@ class Weeks extends Component {
     const starts = this.getWeekStartDates(view);
     const month = starts[1].getMonth();
 
+    return console.log("days to come");
     return (
       starts.map(function (s, i) {
         return (
@@ -82,8 +84,6 @@ class Weeks extends Component {
     const outcome = 'current' + (this.state.sliding ? (' sliding ' + this.state.sliding) : '');
     const outcomeTwo = 'other' + (this.state.sliding ? (' sliding' + this.state.sliding) : '');
 
-    console.log('begining to render');
-
     return (
       <div className='weeks'>
         <div className={outcome}>
@@ -97,3 +97,12 @@ class Weeks extends Component {
   }
 
 }
+
+export default Weeks
+
+// <div className={outcome}>
+//   {this.renderWeeks(this.state.view)}
+// </div>
+// <div className={outcomeTwo}>
+//   {this.renderWeeks(this.state.other)}
+// </div>
