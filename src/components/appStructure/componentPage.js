@@ -84,7 +84,6 @@ class ComponentPage extends Component {
   }
 
   renderSelectedComp() {
-    // console.log('is selectedComp being called', this.props);
     return (
       <div>
         <Header />

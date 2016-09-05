@@ -16,7 +16,7 @@ export default class Dropdown extends Component {
     this.state = {
       listVisible: false,
       list: ['one', 'two', 'three'],
-      button:'',
+      button: '',
     };
 
     this.select = this.select.bind(this);
@@ -27,7 +27,6 @@ export default class Dropdown extends Component {
 
   select(item) {
     //this is where you would pass the selected item to your models
-    // console.log('this is supposed to be item', item);
   }
 
   makeVisable(btnName) {

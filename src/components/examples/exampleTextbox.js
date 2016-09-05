@@ -25,8 +25,6 @@ export default class Textbox extends Component {
     //setState is async so the value must be reset only when the comment section has been populated
 
     this.setState({ comment: this.state.value }, function () { this.setState({ value: '' });});
-
-    console.log('this is being called', this.state);
   }
 
   // onSubmit={this.handleSubmit.bind(this)}>

@@ -4,8 +4,6 @@ import { Link } from 'react-router';
 import { bindActionCreators } from 'redux';
 import { deselect } from '../../actions/index';
 
-console.log();
-
 //TODO: Integrate a codemirror module into this component to give the user
 //the option to view code directly
 
@@ -22,7 +20,6 @@ class SelectComponent extends Component {
   }
 
   render() {
-    console.log('selected', this.props);
     return (
       <div className="componentBox spacing">
         <pre><code> const freedom != 'free';

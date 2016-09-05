@@ -32,7 +32,6 @@ export default class Nav extends Component {
   }
 
   setSelected(value) {
-    console.log('selected is being called on', value);
     this.setState({ option: value });
   }
 

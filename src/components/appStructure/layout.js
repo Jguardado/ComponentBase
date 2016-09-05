@@ -13,7 +13,6 @@ import OtherProjects from './reccomendedProjects';
 export default class Layout extends Component {
 
   render() {
-    console.log('home: ', this.props);
     return (
       <div>
         <Banner />
