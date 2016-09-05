@@ -1,11 +1,10 @@
 {
   "name": "ComponentBase",
   "version": "0.0.0",
-  "description": "An outsource library of React componets built in ES6",
+  "description": "An open-source library of React components built in ES6",
   "main": "app/app.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "postinstall": "webpack --config ./webpack.production.config.js --progress --colors",
     "frontend": "webpack-dev-server",
     "build": "webpack",
     "deploy": ""
@@ -28,13 +27,18 @@
   "author": "Juan Guardado",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.14.0",
+    "babel": "^6.5.2",
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
     "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-2": "^6.13.0",
     "body-parser": "^1.15.2",
     "bootstrap": "^3.3.6",
     "classnames": "^2.2.5",
-    "css-loader": "^0.23.1",
+    "css-loader": "^0.24.0",
     "express": "^4.14.0",
     "file-loader": "^0.9.0",
     "fs": "0.0.2",
@@ -49,9 +53,9 @@
     "null-loader": "^0.1.0",
     "path": "^0.12.7",
     "react": "^15.2.1",
-    "react-bootstrap": "^0.29.5",
+    "react-bootstrap": "^0.30.3",
     "react-dom": "^15.2.1",
-    "react-native": "^0.29.1",
+    "react-native": "^0.32.0",
     "react-proxy-loader": "^0.3.1",
     "react-redux": "^4.4.5",
     "react-router": "^2.5.2",
@@ -63,18 +67,22 @@
     "webpack-dev-server": "^1.14.1"
   },
   "devDependencies": {
-    "babel-core": "^6.10.4",
+    "babel-core": "^6.14.0",
     "babel-eslint": "^6.1.2",
-    "babel-loader": "^6.2.4",
-    "babel-preset-es2015": "^6.9.0",
+    "babel-loader": "^6.2.5",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.14.0",
     "babel-preset-react": "^6.11.1",
     "eslint": "^3.1.0",
-    "eslint-plugin-react": "^5.2.2",
+    "eslint-plugin-react": "^6.2.0",
     "jshint": "^2.9.2",
     "jshint-loader": "^0.8.3",
     "node-libs-browser": "^1.0.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
     "react-hot-loader": "^1.0.0",
     "strip-loader": "^0.1.2",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.1"
   }
 }

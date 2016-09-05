@@ -1,17 +1,17 @@
 module.exports = {
-    entry: ['./global.js', './index.js'],
+    entry: ['babel-polyfill', './index.js'],
     output: {
         path: __dirname,
-        filename: 'bundle.js',
+        filename: 'public/bundle.js',
       },
     module: {
       loaders: [
           {
-            test: [/\.js$/, /\.es6$/],
+            test: /\.jsx?$/,
             exclude: /node_modules/,
-            loader: 'babel-loader',
+            loader: 'babel',
             query: {
-              presets: ['react', 'es2015'],
+              presets: ['react', 'es2015', 'stage-2'],
             },
           },
       ],
