@@ -23,6 +23,10 @@ class ComponentPage extends Component {
   constructor(props) {
     super(props);
   }
+  // <div className='componentBox'>
+  //   <Calendar />
+  //   <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleProgressBar.js' comp='progress_bar'/>
+  // </div>
 
   renderFullPage() {
     //TODO: Build this correctly with React-Router
@@ -32,10 +36,6 @@ class ComponentPage extends Component {
         <div className='container main'>
         <h1 className='page-header headingtext'>Example of Useful Functions</h1>
           <div className='scrollbar'>
-            <div className='componentBox'>
-              <Calendar />
-              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleProgressBar.js' comp='progress_bar'/>
-            </div>
             <div className='componentBox'>
               <ProgressBar />
               <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleProgressBar.js' comp='progress_bar'/>
