@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import './appStructure.css';
 
 // NOTE: this is an interesting pattern. It allows for you to pull in all of the
 // actions (without naming) and mapthem to dispatch. However this is reliant on

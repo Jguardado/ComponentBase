@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './appStructure.css';
 
 export default class Banner extends Component {
   render() {

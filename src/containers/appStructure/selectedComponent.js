@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import { bindActionCreators } from 'redux';
 import { deselect } from '../../actions/index';
+import './appStructure.css';
 
 //TODO: Integrate a codemirror module into this component to give the user
 //the option to view code directly

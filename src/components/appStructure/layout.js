@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './appStructure.css';
 import Banner from './Banner';
 import Intro from './Intro';
 import Header from '../examples/exampleRouters';

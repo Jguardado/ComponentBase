@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import './appStructure.css';
 
 class AddedComponents extends Component {
   constructor(props) {

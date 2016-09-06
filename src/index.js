@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
-import './styles';
 
 ReactDOM.render(
   <App />,
