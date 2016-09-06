@@ -18,13 +18,13 @@ export default class Intro extends Component {
 
         <p className='headingtext tab'>This library is a work in progress. I encourage all Engineers,
         seasoned and novice, to add-in this effort. If there is a comment you would like to add, feel free
-        to make a pull request. Being an advocate of open-source I welcome 
+        to make a pull request. Being an advocate of open-source I welcome
         <a href='https://github.com/Jguardado/ComponentBase/issues'>contributions and review</a>.
-        I will be happy to review and integrate your suggestions into this library.                                        </p>
+        I will be happy to review and integrate your suggestions into this library.</p>
 
         <p className='headingtext tab'>For an awesome starter kick with webpack configurations
-        I recommend you check out: <a href='https://github.com/colinlmcdonald/react-redux-webpack'>react-redux-webpack</a> by Colin McDonald.
-        It is a great way for anyone to get a jump start on their projects.                                        </p>
+        I recommend you check out: <a href='https://github.com/colinlmcdonald/react-redux-webpack'>react-redux-webpack</a>
+         by Colin McDonald. It is a great way for anyone to get a jump start on their projects.</p>
       </div>
     );
   }

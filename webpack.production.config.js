@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const nodeModulesPath = path.resolve(__dirname, 'node_modules');
 const buildPath = path.resolve(__dirname, 'public', 'build');
 const mainPath = path.resolve(__dirname, 'src', 'index.js');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     devtool: 'source-map',
@@ -25,6 +26,9 @@ module.exports = {
             test: /\.css$/,
             loader: 'style!css',
           },
+          { test: /\.scss$/,
+            loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
+          },
       ],
     },
     resolve: {
@@ -37,5 +41,6 @@ module.exports = {
             NODE_ENV: JSON.stringify('production'),
           },
         }),
+      new ExtractTextPlugin('style.css', { allChunks: false }),
     ],
   };

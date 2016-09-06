@@ -5,7 +5,7 @@ export default class Banner extends Component {
     return (
       <div className='jumbotron'>
         <h1 className='center jumobotext'>ComponentBase</h1>
-        <img className='logo center-block' src='/src/images/logo-min.png'/>
+        <img className='logo center-block' src='../../images/logo-min.png'/>
       </div>
     );
   }
