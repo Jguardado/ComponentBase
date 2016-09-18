@@ -10,9 +10,7 @@ import 'codemirror/mode/javascript/javascript';
 import 'codemirror/mode/xml/xml';
 import 'codemirror/mode/markdown/markdown';
 
-//TODO: Integrate a codemirror module into this component to give the user
-//the option to view code directly
-
+//TODO: Must build out default versions of comps as below
 const defaults = {
   javascript: 'var component = {\n\tname: "react-codemirror",\n\tauthor: "Jed Watson",\n\trepo: "https://github.com/JedWatson/react-codemirror"\n};',
 };
