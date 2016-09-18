@@ -6,7 +6,8 @@
     "start": "nodemon server",
     "frontend": "webpack-dev-server --inline",
     "build": "webpack",
-    "postinstall": "webpack -p --config webpack.production.config.js"
+    "postinstall": "webpack -p --config webpack-production.config.js",
+    "el-producto": "webpack --config webpack-production.config.js -p"
   },
   "repository": {
     "type": "git",
