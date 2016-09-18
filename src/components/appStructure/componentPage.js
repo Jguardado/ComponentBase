@@ -101,7 +101,7 @@ class ComponentPage extends Component {
   render() {
     const { selected } = this.props;
 
-    console.log('children this may happen');
+    console.log('children this', this.props);
     if (selected.selected) {
       return this.renderSelectedComp();
 
