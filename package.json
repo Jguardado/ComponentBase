@@ -4,7 +4,7 @@
   "description": "An open-source library of React components built in ES6",
   "scripts": {
     "start": "nodemon server",
-    "frontend": "webpack-dev-server",
+    "frontend": "webpack-dev-server --inline",
     "build": "webpack",
     "postinstall": "webpack -p --config webpack.production.config.js"
   },

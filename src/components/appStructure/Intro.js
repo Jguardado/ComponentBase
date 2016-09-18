@@ -7,7 +7,7 @@ export default class Intro extends Component {
     return (
       <div className='intro mainTwo'>
         <p className='headingtext tab'>ComponentBase is a library of commonly
-        used React <Link to='/component'>components</Link>. It is a tool for Engineers. Each
+        used React <Link to='/components'>components</Link>. It is a tool for Engineers. Each
         component is designed to be easily integrated into your own applications.</p>
 
         <p className='headingtext tab'>The goal is to provide readily compatible code
@@ -17,7 +17,7 @@ export default class Intro extends Component {
         Engineers can incoperate any part of the snippet that might be useful for their current application.
         </p>
 
-        <p className='headingtext tab'>This library is a work in progress. I encourage all Engineers,
+        <p className='headingtext tab'> This library is a work in progress. I encourage all Engineers,
         seasoned and novice, to add-in this effort. If there is a comment you would like to add, feel free
         to make a pull request. Being an advocate of open-source I welcome
         <a href='https://github.com/Jguardado/ComponentBase/issues'>contributions and review</a>.

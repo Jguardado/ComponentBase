@@ -5,17 +5,15 @@ const buildPath = path.resolve(__dirname, 'public', 'build');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const mainPath = path.resolve(__dirname, 'src', 'index.js');
 
+console.log('this is main path: ', mainPath);
+console.log('this is node_modules path: ', nodeModulesPath);
+console.log('this is build path: ', buildPath);
+
 module.exports = {
-    devtool: 'eval',
-    entry: [
-      'webpack/hot/dev-server',
-      'webpack-dev-server/client?http://localhost:8080',
-      mainPath,
-    ],
+    entry: mainPath,
     output: {
         path: buildPath,
         filename: 'bundle.js',
-        publicPath: '/build/',
       },
     module: {
       loaders: [
@@ -53,5 +51,4 @@ module.exports = {
       extensions: ['', '.js', '.es6', 'jsx', '.css'],
     },
     watch: true,
-    plugins: [new Webpack.HotModuleReplacementPlugin()],
   };
