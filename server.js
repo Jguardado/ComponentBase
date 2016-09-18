@@ -17,7 +17,7 @@ if (!isProduction) {
 
   app.all('/build/*', function (req, res) {
     proxy.web(req, res, {
-        target: 'http://localhost:8080',
+        target: 'http://localhost:3000',
       });
   });
 }
