@@ -11,8 +11,7 @@ import 'codemirror/mode/javascript/javascript';
 import 'codemirror/mode/xml/xml';
 import 'codemirror/mode/markdown/markdown';
 
-//TODO: Must build out default versions of comps as below
-console.log('this is comps: ', comps);
+//TODO: Must pass in the name of component for check against 'comps' obj to render correct code
 const defaults = {
   javascript: 'var component = {\n\tname: "react-codemirror",\n\tauthor: "Jed Watson",\n\trepo: "https://github.com/JedWatson/react-codemirror"\n};',
 };
@@ -20,8 +19,10 @@ const defaults = {
 class SelectComponent extends Component {
   constructor(props) {
     super(props);
+    console.log(this.props);
+
     this.state = {
-      code: comps.exampleButton,
+      code: comps.HideShow,
       mode: 'javascript',
       readOnly: false,
     };
@@ -46,7 +47,7 @@ class SelectComponent extends Component {
 
   render() {
     const options = {
-      lineNumbers: true, readOnly: this.state.readOnly, mode: this.state.mode,
+      lineNumbers: true, readOnly: this.state.readOnly, mode: this.state.mode, tabSize: 2,
     };
 
     return (

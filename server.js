@@ -9,6 +9,8 @@ var isProduction = process.env.NODE_ENV === 'production';
 var port = isProduction ? process.env.PORT : 3000;
 var publicPath = path.resolve(__dirname, 'public');
 
+var db = require('./server/db');
+
 app.use(express.static(publicPath));
 
 if (!isProduction) {

@@ -1,83 +1,130 @@
-var fs = require('fs');
-var path = require('path');
-var mysql = require('mysql');
+//NOTE: switching approach to mongoDB version.
+var mongod = require('mongodb');
+var mongoose = require('mongoose');
+var MongoClient = mongod.MongoClient;
+mongoose.connect('mongodb://localhost/component_base');
 
-//Creating a user object constructor:
-var User = function (id, name, github) {
-  this.name = name;
-  this.github = github;
-  this.id = id;
-};
+//User model defined
+var User = mongoose.model('User', { name: String, roles: Array, age: Number });
 
-//NOTE: Establishing connection
-var connection = mysql.createConnection({
-  host: 'localhost',
-  database: 'test',
-});
+//NOTE: example of save functions:
+// user1.save(function (err, userObj) {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log('saved successfully:', userObj);
+//   }
+// });
 
-connection.connect(function (err) {
-  if (err) {
-    console.log('Error connecting to Db', err);
-    return;
+//NOTE: example of locating a updating functions
+// User.findOne({ name: 'modulus admin' }, function (err, userObj) {
+//   if (err) {
+//     console.log(err);
+//   } else if (userObj) {
+//     console.log('Found:', userObj);
+//
+//     //For demo purposes lets update the user on condition.
+//     if (userObj.age != 30) {
+//       //Some demo manipulation
+//       userObj.age += 30;
+//
+//       //Lets save it
+//       userObj.save(function (err) {
+//         if (err) {
+//           console.log(err);
+//         } else {
+//           console.log('Updated', userObj);
+//         }
+//       });
+//     }
+//   } else {
+//     console.log('User not found!');
+//   }
+// });
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Copied from my boys Nick Bauer, Karun, Blaine Degannes, Sola
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//NOTE: The original CRUD functions were borrowed from my frineds whiel I
+//rediscover this lovely thing call mongoDB and building out backend in general
+
+//////////////////////////////////////////
+//CREATE
+//////////////////////////////////////////
+
+exports.addUser = function (userObj, callback) {
+
+  //user validation
+  if (!userObj.password) {
+    return callback('password field required', null);
+  }else if (!userObj.userName) {
+    return callback('userName field required', null);
   }
 
-  console.log('Connection established');
-});
+  var user = new User(userObj);
 
-//NOTE: creating C.R.U.D. functions.
-exports.addUser = function (newUser) {
-  connection.query('INSERT INTO users SET ?', newUser, function (err, res) {
-    if (err) {
-      conosle.error('add user didnt work');
-    }
-
-    console.log('Last insert ID:', res.insertId);
+  user.save(function (err, user) {
+    return callback(err, user);
   });
-
 };
 
-exports.readUser = function (id) {
-  connection.query('SELECT * FROM users WHERE id = ?', [id], function (err, res) {
-      if (err) {
-        console.error('read user didnt work');
-      }
+exports.addFamilyMember = function (idObj, familyObj, callback) {
+  return accessUserById(idObj, 'add family', familyObj, callback);
+};
 
-      console.log('this is your user', res);
-      return res;
+exports.addHistory = function (idObj, historyObj, callback) {
+  return accessUserById(idObj, 'add history', historyObj, callback);
+};
+
+//////////////////////////////////////////
+//READ
+//////////////////////////////////////////
+
+exports.verifyUser = function (userObj, callback) {
+
+  User.findOne(userObj, '_id', function (err, user) {
+    if (!user) {
+      return callback('user not found', null);
+    }else {
+      return callback(err, user['_id']);
     }
-  );
-
+  });
 };
 
-exports.updateUser = function (category, itemForUpdate, id) {
-  //this needs more adjustments I'll need to identfiy what I want passed in
-  connection.query('UPDATE users SET ' + category + ' = ? Where ID = ?', [itemForUpdate, id], function (err, result) {
-      if (err) {
-        console.error('update user did not work');
-      }
-
-      console.log('Changed ' + result.changedRows + ' rows');
-    }
-  );
-
+//TODO: These should be reconfigured into practical usage for ComponentBase
+exports.getAllFamily = function  (idObj, callback) {
+  return accessUserById(idObj, 'get family', {}, callback);
 };
 
-exports.deleteUser = function (id) {
-  connection.query('DELETE FROM users WHERE id = ?', [id], function (err, result) {
-      if (err) {
-        console.error('delete user didnt work', err);
-      } else {
-        console.log('Deleted ' + result.affectedRows + ' rows');
-      }
-
-    }
-  );
-
+exports.getSingleFamilyMember = function  (idObj, callback) {
+  return accessUserById(idObj, 'get member', {}, callback);
 };
 
-// exports.addUser(tommy);
+exports.getAllActions = function (callback) {
+  Action.find({}, callback);
+};
 
-//
-// console.log(tommy);
+//////////////////////////////////////////
+//UPDATE
+//////////////////////////////////////////
 
-// exports.updateUser('github', 'tom_codes', 5);
+exports.updateFamilyMember = function (idObj, familyObj, callback) {
+  return accessUserById(idObj, 'update family', familyObj, callback);
+};
+
+exports.updateHistory = function (idObj, historyObj, callback) {
+  return accessUserById(idObj, 'update history', historyObj, callback);
+};
+
+//////////////////////////////////////////
+//DELETE
+//////////////////////////////////////////
+
+exports.deleteFamilyMember = function (idObj, callback) {
+  return accessUserById(idObj, 'delete family', {}, callback);
+};
+
+exports.deleteHistory = function (idObj, callback) {
+  return accessUserById(idObj, 'delete history', {}, callback);
+};
