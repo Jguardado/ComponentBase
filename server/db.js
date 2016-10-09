@@ -7,6 +7,11 @@ var { callback, performAction } = require('./dbactions');
 
 mongoose.connect('mongodb://localhost/component_base');
 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Copied from my boys Nick Bauer, Karun Siddana, Blaine Degannes, Sola Harrison
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 //NOTE: Damn NICK lol bossy.
 var accessUserById = function (ids, action, callback) {
   return User.findOne({ _id: ids.userId }, 'family', function (err, user) {
@@ -32,7 +37,6 @@ var accessComponentById = function (ids, callback) {
   });
 };
 
-
 //NOTE: This needs to be trimmed down to probably two filtering conditionals
 // one for component the other for component history (i.e. )
 var accessCommentByComponentId = function (ids, action, properties, callback) {
@@ -52,7 +56,7 @@ var accessCommentByComponentId = function (ids, action, properties, callback) {
   };
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// Copied from my boys Nick Bauer, Karun, Blaine Degannes, Sola
+// Copied from my boys Nick Bauer, Karun Siddana, Blaine Degannes, Sola Harrison
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //NOTE: The original CRUD functions were borrowed from my friends while I
 //rediscover this lovely thing called mongoDB and building out backend in general
@@ -60,35 +64,32 @@ var accessCommentByComponentId = function (ids, action, properties, callback) {
 //////////////////////////////////////////
 //CREATE
 //////////////////////////////////////////
+exports.addUser = function (userObj, callback) {
+  //user validation
+  if (!userObj.password) {
+    return callback('password field required', null);
+  }else if (!userObj.userName) {
+    return callback('userName field required', null);
+  }
 
-//NOTE: looks like callback really allows for two args but not clearly defined,
-//probably an `alert`.
+  var user = new User(userObj);
+  user.save(function (err, user) {
+    return callback(err, user);
+  });
+};
 
-// exports.addUser = function (userObj, callback) {
-//   //user validation
-//   if (!userObj.password) {
-//     return callback('password field required', null);
-//   }else if (!userObj.userName) {
-//     return callback('userName field required', null);
-//   }
-//
-//   var user = new User(userObj);
-//
-//   user.save(function (err, user) {
-//     return callback(err, user);
-//   });
-// };
-//
-// exports.addComponent = function (compObj, callback) {
-//   component.save(function (err, component) {
-//     return callback(err, component);
-//   });
-// };
-//
-// exports.addHistory = function (idObj, historyObj, callback) {
-//   return accessUserById(idObj, 'add history', historyObj, callback);
-// };
-//
+exports.addComponent = function (compObj, callback) {
+
+  var component = new Component(userObj);
+  component.save(function (err, component) {
+    return callback(err, component);
+  });
+};
+
+exports.addHistory = function (idObj, commentHistoryObj, callback) {
+  return accessCommentByComponentId(idObj, 'add history', commentHistoryObj, callback);
+};
+
 // //////////////////////////////////////////
 // //READ
 // //////////////////////////////////////////
