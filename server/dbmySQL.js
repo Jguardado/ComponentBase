@@ -74,10 +74,3 @@ exports.deleteUser = function (id) {
   );
 
 };
-
-// exports.addUser(tommy);
-
-//
-// console.log(tommy);
-
-// exports.updateUser('github', 'tom_codes', 5);
