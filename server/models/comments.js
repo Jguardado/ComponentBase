@@ -1,3 +1,5 @@
+var mongoose = require('mongoose');
+
 var CommentsSchema = mongoose.Schema({
   user: { type: String },
   componentName: { type: String, index: { unique: true } },

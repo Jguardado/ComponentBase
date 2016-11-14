@@ -1,3 +1,5 @@
+var mongoose = require('mongoose');
+
 var ComponentSchema = mongoose.Schema({
   componentName: { type: String, index: { unique: true } },
   codeMirror: { type: String },

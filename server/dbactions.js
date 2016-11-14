@@ -59,16 +59,10 @@ var performAction = {
 
   'delete family': function (user, callback, properties, familyMember) {
     if (!familyMember) {
-      return callback('add history: a family id must be provided', null);
+      return callback('remove history: a family id must be provided', null);
     }
 
-    user.family = _.reject(user.family, function (user) {
-      return user === familyMember;
-    });
-
-    user.save(function (err, user) {
-      return callback(err, familyMember);
-    });
+    user.drop();
   },
 
   'update history': function (user, callback, properties, familyMember, historyEvent) {
@@ -97,4 +91,4 @@ var performAction = {
   },
 };
 
-module.exports = { callback, performActionOnUser };
+module.exports = { callback, performAction };

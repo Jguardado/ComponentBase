@@ -11,9 +11,13 @@ mongoose.connect('mongodb://localhost/component_base');
 // Copied from my boys Nick Bauer, Karun Siddana, Blaine Degannes, Sola Harrison
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 //NOTE: Damn NICK lol bossy.
-var accessUserById = function (ids, action, callback) {
+exports.accessAllUsers = function (callback) {
+  console.log('calling for user');
+  return User.find();
+};
+
+exports.accessUserById = function (ids, action, callback) {
   return User.findOne({ _id: ids.userId }, 'family', function (err, user) {
     if (err) {
       return callback(err, null);
@@ -25,7 +29,7 @@ var accessUserById = function (ids, action, callback) {
   });
 };
 
-var accessComponentById = function (ids, callback) {
+exports.accessComponentById = function (ids, callback) {
   return Component.findOne({ _id: ids.componentId }, function (err, user) {
     if (err) {
       return callback(err, null);
@@ -39,7 +43,7 @@ var accessComponentById = function (ids, callback) {
 
 //NOTE: This needs to be trimmed down to probably two filtering conditionals
 // one for component the other for component history (i.e. )
-var accessCommentByComponentId = function (ids, action, properties, callback) {
+exports.accessCommentByComponentId = function (ids, action, properties, callback) {
     return Component.findOne({ _id: ids.userId }, 'family', function (err, user) {
       if (ids.commentsId) {
         commentHistory = _.find(ids.comments, function (comments) {
@@ -86,7 +90,7 @@ exports.addComponent = function (compObj, callback) {
   });
 };
 
-exports.addHistory = function (idObj, commentHistoryObj, callback) {
+exports.addComment = function (idObj, commentHistoryObj, callback) {
   return accessCommentByComponentId(idObj, 'add history', commentHistoryObj, callback);
 };
 
@@ -118,25 +122,25 @@ exports.addHistory = function (idObj, commentHistoryObj, callback) {
 //   Action.find({}, callback);
 // };
 //
-// //////////////////////////////////////////
-// //UPDATE
-// //////////////////////////////////////////
-//
-// exports.updateFamilyMember = function (idObj, familyObj, callback) {
-//   return accessUserById(idObj, 'update family', familyObj, callback);
-// };
-//
-// exports.updateHistory = function (idObj, historyObj, callback) {
-//   return accessUserById(idObj, 'update history', historyObj, callback);
-// };
-//
+//////////////////////////////////////////
+//UPDATE
+//////////////////////////////////////////
+
+exports.updateUser = function (idObj, familyObj, callback) {
+  return accessUserById(idObj, 'update family', familyObj, callback);
+};
+
+exports.updateComment = function (idObj, historyObj, callback) {
+  return accessUserById(idObj, 'update history', historyObj, callback);
+};
+
 // //////////////////////////////////////////
 // //DELETE
 // //////////////////////////////////////////
 //
-// exports.deleteFamilyMember = function (idObj, callback) {
-//   return accessUserById(idObj, 'delete family', {}, callback);
-// };
+exports.deleteFamilyMember = function (idObj, callback) {
+  return accessUserById(idObj, 'delete family', {}, callback);
+};
 //
 // exports.deleteHistory = function (idObj, callback) {
 //   return accessUserById(idObj, 'delete history', {}, callback);
