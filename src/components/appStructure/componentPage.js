@@ -24,7 +24,7 @@ import Calendar from '../DataPicker';
 class ComponentPage extends Component {
   // <div className='componentBox'>
   //   <Calendar />
-  //   <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleProgressBar.js' comp='progress_bar'/>
+  //   <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/examples/exampleProgressBar.js' comp='progress_bar'/>
   // </div>
 
   renderFullPage() {
@@ -37,47 +37,47 @@ class ComponentPage extends Component {
           <div className='scrollbar'>
             <div className='componentBox'>
               <ProgressBar />
-              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleProgressBar.js' comp='ProgressBar'/>
+              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/examples/exampleProgressBar.js' comp='ProgressBar'/>
             </div>
             <div className='componentBox'>
               <NavBar />
-              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleNavBar.js' comp='NavBar'/>
+              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/examples/exampleNavBar.js' comp='NavBar'/>
             </div>
             <div className='componentBox'>
               <HideShow/>
-              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleHideShow.js' comp='HideShow'/>
+              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/examples/exampleHideShow.js' comp='HideShow'/>
             </div>
             <div className='componentBox'>
               <Contructor />
-              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/constructorFunc.js' comp="Contructor"/>
+              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/examples/constructorFunc.js' comp="Contructor"/>
             </div>
             <div className='componentBox'>
               <Buttons />
-              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleButton.js' comp="Buttons"/>
+              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/examples/exampleButton.js' comp="Buttons"/>
             </div>
             <div className='componentBox'>
               <InputForm />
-              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleInputForm.js' comp="InputForm"/>
+              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/examples/exampleInputForm.js' comp="InputForm"/>
             </div>
             <div className='componentBox'>
               <InputOnClick />
-              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleInputOnClick.js' comp="InputOnClick"/>
+              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/examples/exampleInputOnClick.js' comp="InputOnClick"/>
             </div>
             <div className='componentBox'>
               <Textbox />
-              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleTextbox.js' comp="Textbox"/>
+              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/examples/exampleTextbox.js' comp="Textbox"/>
             </div>
             <div className='componentBox'>
               <SliderBar />
-              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleSliderbar.js' comp="SliderBar"/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleSliderbar.js'/>
+              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/examples/exampleSliderbar.js' comp="SliderBar"/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/examples/exampleSliderbar.js'/>
             </div>
             <div className='componentBox'>
               <Picture />
-              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleImg.js' comp="Picture"/>
+              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/examples/exampleImg.js' comp="Picture"/>
             </div>
             <div className='componentBox last'>
               <Dropdown />
-              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/exampleDropdown.js' comp="Dropdown"/>
+              <Info github='https://github.com/Jguardado/ComponentBase/blob/master/src/components/examples/exampleDropdown.js' comp="Dropdown"/>
             </div>
           </div>
         </div>

@@ -54,7 +54,9 @@ class SelectComponent extends Component {
       <div>
         <Codemirror ref="editor" value={this.state.code} onChange={this.updateCode.bind(this)} options={options} interact={this.interact}/>
         <div className="componentBox spacing">
-          <h3>We are working on getting you a forum. In the mean time please feel free to go comment on our github issues pages</h3>
+          <h5 className="comment-box">
+            We are working on getting you a forum. In the mean time please feel free to go comment on our github issues pages
+          </h5>
           <span className="">
             <Link to='/components'>
               <button

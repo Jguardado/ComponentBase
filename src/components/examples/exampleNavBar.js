@@ -29,8 +29,8 @@ export default class NavBar extends Component {
     return (
         <div className='center'>
         <legend className='headingtext'>Example NavBar</legend>
-          <ul>{ this.state.items.map(function (m, index) {
-            var style = '';
+          <ul>{ this.state.items.map((m, index) => {
+            let style = '';
             if (_this.state.focused == index) {
               style = 'focused';
             }
