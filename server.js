@@ -9,6 +9,8 @@ var isProduction = process.env.NODE_ENV === 'production';
 var port = isProduction ? process.env.PORT : 3000;
 var publicPath = path.resolve(__dirname, 'public');
 
+var db = require('./server/db');
+
 app.use(express.static(publicPath));
 
 if (!isProduction) {
@@ -36,14 +38,15 @@ app.listen(port, function (err) {
 
 //NOTE: Setting up url routes.
 
-// app.get('/component', function (req, res) {
-//   console.log('this is the res/req var', res, req);
-//   var store = db.readUser(req.params.id);
-//
-//   console.log('this is when called on server file', store);
-//
-// });
+app.get('/users', function (req, res) {
+  console.log('hitting end point');
+  var store = db.accessAllUsers();
 
+  console.log('this is when called on server file', store);
+
+});
+
+//
 // .then(function (result) {
 //   if (result) {
 //     res.send(result);
