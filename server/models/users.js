@@ -6,4 +6,8 @@ var UserSchema = mongoose.Schema({
 });
 
 var User = mongoose.model('User', UserSchema);
-exports.User;
+console.log('this User in Model: ', User);
+
+module.exports = {
+  User: User,
+};

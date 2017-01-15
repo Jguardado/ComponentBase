@@ -8,4 +8,9 @@ var CommentsSchema = mongoose.Schema({
 });
 
 var Comments = mongoose.model('Comments', CommentsSchema);
-exports.Comments;
+console.log('this Comments in Model: ', Comments);
+
+module.exports= {
+  Comments: Comments,
+  CommentsSchema: CommentsSchema
+}

@@ -39,6 +39,7 @@ app.listen(port, function (err) {
 //NOTE: Setting up url routes.
 
 app.get('/users', function (req, res) {
+  console.log('hitting end point');
   var store = db.accessAllUsers();
 
   console.log('this is when called on server file', store);
