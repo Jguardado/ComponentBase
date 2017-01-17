@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import { clone, isSameDay, isBefore, isAfter, toDayOfMonthString } from './DateUtilities';
 
 class Week extends Component {
-
   constructor(props){
     super(props);
-
-    console.log("rhese are the props: ", this.props);
+    console.log("is week being called");
   }
   //
   // buildDays(start) {
@@ -56,7 +54,7 @@ class Week extends Component {
 
     return (
       <div className="week">
-        <p>DAY</p>
+        <h1>DAY time</h1>
       </div>
     )
   }

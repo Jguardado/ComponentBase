@@ -69,7 +69,7 @@ class DatePicker extends Component {
   render() {
     return (
       <div className='ardp-date-picker'>
-        <h2>Date Picker</h2>
+        <h4>Date Picker</h4>
         <input
           type='text'
           className='date-picker-trigger'
