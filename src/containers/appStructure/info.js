@@ -20,6 +20,7 @@ class Info extends Component {
   }
 
   render() {
+    console.log('props in Info: ', this.props);
     return (
       <div className='right'>
         <div>

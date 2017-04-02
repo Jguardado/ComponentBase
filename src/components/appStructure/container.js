@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Nav from '../examples/exampleRouters';
+import Header from './header.jsx';
 
 export const Container = (props) => <div>
-  <Nav />
+  <Header />
   {props.children}
 </div>;
