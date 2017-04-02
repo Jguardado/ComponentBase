@@ -9,7 +9,7 @@ module.exports = {
   ],
 
   output: {
-    path: path.join(__dirname, 'public'),
+    path: path.join(__dirname, 'public', 'build'),
     filename: 'bundle.js',
     publicPath: '/public/',
   },
@@ -31,7 +31,7 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.js?$/,
+      { test: /\.jsx?$/,
         loader: 'babel',
         exclude: /node_modules/,
         query: {
@@ -47,5 +47,8 @@ module.exports = {
       { test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
         loader: 'file', },
     ],
+  },
+  resolve: {
+    extensions: ['', '.js', '.es6', '.jsx', '.css', ".styl"],
   },
 };
