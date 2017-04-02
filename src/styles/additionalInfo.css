@@ -19,6 +19,7 @@
   border-radius: 4px;
   font-size: 0.8125rem;
   background-color: rgba( 69,145, 61, 0.7);
+  box-shadow: 3px -1px 3px 0px rgba(0,0,0,0.35);
   margin-bottom: 50px;
   font-family: 'Didact Gothic', sans-serif;
   font-weight: bolder;
@@ -29,12 +30,12 @@
 
 .one {
   flex: 1;
-  margin-right: 7px;
+  margin-right: 10px;
 }
 
 .two {
   flex: 1;
-  margin-right: 7px;
+  margin-right: 10px;
 }
 
 .three {

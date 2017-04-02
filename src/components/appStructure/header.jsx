@@ -28,23 +28,25 @@ class Header extends Component {
 
     render() {
       return (
-        <div className='navbar navbar-default navbar-fixed-top head'>
-            <ui className="nav navbar-nav">
-              <li>
+        <div className='head'>
+          <div className='jumobotext headerlogo'>ComponentBase</div>
+          <div className="nav-links">
+            <div className="nav-bar">
+              <div className="nav-button">
                 <Link to='/' className='nav-link'>Home</Link>
-              </li>
-              <li>
-              <a className='nav-link' href='https://github.com/Jguardado'>GitHub</a>
-              </li>
-              <li>
-              <a className='nav-link' href='https://medium.com/@juanguardado'>Blog</a>
-              </li>
-              <li>
+              </div>
+              <div className="nav-button">
+                <a className='nav-link' href='https://github.com/Jguardado'>GitHub</a>
+              </div>
+              <div className="nav-button">
+                <a className='nav-link' href='https://medium.com/@juanguardado'>Blog</a>
+              </div>
+              <div className="nav-button">
                 <Link to='/components' className='nav-link'>Components</Link>
-              </li>
-            </ui>
-            <h4 className='navbar-brand jumobotext headerlogo'>ComponentBase</h4>
+              </div>
+            </div>
           </div>
+        </div>
       );
     };
 };

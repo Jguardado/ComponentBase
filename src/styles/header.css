@@ -1,0 +1,39 @@
+/*Styling for headers*/
+.head {
+  display: flex;
+  margin-bottom: 0px;
+}
+
+.jumobotext {
+  font-family: 'Berkshire Swash', cursive;
+  color: black;
+  margin-left: 10px;
+  font-size: 24px;
+}
+
+.nav-links {
+  flex: 2;
+}
+
+.headerlogo {
+  flex: 1;
+  /*float: right*/
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-button {
+  flex: 1;
+  width: 25%;
+  height: 35px;
+  border-radius: 3px;
+  box-shadow: 3px -1px 3px 0px rgba(0,0,0,0.35);
+  background-color: #d2e0c9;
+  margin-right: 10px;
+  text-align: center;
+
+}

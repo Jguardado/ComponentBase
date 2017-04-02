@@ -1,5 +1,6 @@
 @import "./additionalInfo";
 @import "./footer";
+@import "./header";
 
 /*Styling for the Jumbotron header*/
 .jumbotron {
@@ -15,19 +16,6 @@
 .jumobotext {
   font-family: 'Berkshire Swash', cursive;
   color: black;
-}
-
-.headerlogo {
-  position: absolute;
-  right: 0;
-  bottom: 2px;
-}
-
-
-
-/*Styling for the footer and headers*/
-.head {
-  margin-bottom: 0px;
 }
 
 /*Progress Bar styling*/
