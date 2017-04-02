@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actionCreators from '../../actions/action';
-import './appStructure.css';
 
 import HideShow from '../examples/exampleHideShow';
 import Contructor from '../examples/constructorFunc';

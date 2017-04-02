@@ -1,0 +1,9 @@
+.footer {
+  display: flex;
+}
+
+.item {
+  flex: 1;
+  background-color: grey;
+  text-align: center;
+}

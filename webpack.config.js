@@ -41,10 +41,14 @@ module.exports = {
             test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
             loader: 'url?limit=10000&mimetype=image/svg+xml',
           },
+          {
+            test: /\.styl$/,
+            loader: 'css-loader!stylus-loader?paths=node_modules/bootstrap-stylus/stylus/'
+          },
       ],
     },
     resolve: {
-      extensions: ['', '.js', '.es6', 'jsx', '.css'],
+      extensions: ['', '.js', '.es6', 'jsx', '.css', ".styl"],
     },
     watch: true,
   };

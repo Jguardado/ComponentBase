@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import './appStructure.css';
 
 export default class Intro extends Component {
   render() {
