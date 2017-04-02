@@ -1,12 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router';
 
-class AddedComponents extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+const NewComponents = () => {
     return (
       <div className='newcomp one'>
         <div className="box-heading">New Components</div>
@@ -18,7 +13,6 @@ class AddedComponents extends Component {
           </h4>
       </div>
     );
-  }
 }
 
-export default AddedComponents;
+export default NewComponents;

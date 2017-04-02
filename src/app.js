@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import ComponentPage from './components/appStructure/componentPage';
 import Home from './components/appStructure/layout';
-import rootreducer from './reducers';
+import "./styles/appStructure.css"
 
 //Nested routes
 import HideShow from './components/examples/exampleHideShow';
@@ -20,10 +19,10 @@ import Dropdown from './components/examples/exampleDropdown';
 import ProgressBar from './components/examples/exampleProgressBar';
 // import Routes from './routes';
 import { Container } from './components/appStructure/container';
+import store from "./root.reducer";
 
-let store = createStore(rootreducer, {},
-  window.devToolsExtension ? window.devToolsExtension() : undefined
-);
+console.log(" this is store: ", store);
+
 
 const NotFound = () => (
   <h1>404.. This page is not found!</h1>);

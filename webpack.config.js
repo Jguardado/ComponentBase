@@ -48,7 +48,7 @@ module.exports = {
       ],
     },
     resolve: {
-      extensions: ['', '.js', '.es6', 'jsx', '.css', ".styl"],
+      extensions: ['', '.js', '.es6', '.jsx', '.css', ".styl"],
     },
     watch: true,
   };

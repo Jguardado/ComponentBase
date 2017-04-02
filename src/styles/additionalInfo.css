@@ -1,0 +1,47 @@
+/*Styling for New Component window*/
+.three-boxes {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: 450px) {
+    flex-direction: row;
+  }
+}
+
+.box-heading {
+  font-weight: 800;
+  font-size: 15px;
+  text-align: center;
+}
+
+.newcomp {
+  height: 200px;
+  border-radius: 4px;
+  font-size: 0.8125rem;
+  background-color: rgba( 69,145, 61, 0.7);
+  margin-bottom: 50px;
+  font-family: 'Didact Gothic', sans-serif;
+  font-weight: bolder;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+}
+
+.one {
+  flex: 1;
+  margin-right: 7px;
+}
+
+.two {
+  flex: 1;
+  margin-right: 7px;
+}
+
+.three {
+  flex: 1;
+}
+
+.list-items {
+  text-align: center;
+  padding-left: 0px;
+}

@@ -5,7 +5,6 @@ import { bindActionCreators } from 'redux';
 import { deselect } from '../../actions/action';
 import Codemirror from 'react-codemirror';
 import { comps } from '../../stringifiedCode/examples';
-import './appStructure.css';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/mode/javascript/javascript';
 import 'codemirror/mode/xml/xml';

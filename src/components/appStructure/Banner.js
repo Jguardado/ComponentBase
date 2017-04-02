@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class Banner extends Component {
-  render() {
-    return (
-      <div className='jumbotron'>
-        <h1 className='center jumobotext'>ComponentBase</h1>
-        <img className='logo center-block' src={'src/images/logo-min.png'} alt="under construction... sorry"/>
-      </div>
-    );
-  }
+const Banner = () => {
+  return (
+    <div className='jumbotron'>
+      <h1 className='center jumobotext'>ComponentBase</h1>
+      <img className='logo center-block' src={'src/images/logo-min.png'} alt="under construction... sorry"/>
+    </div>
+  );
 }
+
+export default Banner

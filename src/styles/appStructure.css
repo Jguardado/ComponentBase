@@ -1,3 +1,6 @@
+@import "./additionalInfo";
+@import "./footer";
+
 /*Styling for the Jumbotron header*/
 .jumbotron {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b4e2b4+0,82ce82+17,50bc50+33,009600+67,006400+83,003200+100 */
@@ -23,61 +26,9 @@
 
 
 /*Styling for the footer and headers*/
-.foot {
-  font-family: 'Didact Gothic', sans-serif;
-  height: 65px;
-  background: rgba( 43,119, 35,1);
-  font-weight: bold;
-}
-
 .head {
   margin-bottom: 0px;
 }
-
-/*Styling for New Component window*/
-.three-boxes {
-  position: relative;
-}
-
-.newcomp {
-  height: 200px;
-  border-radius: 4px;
-  font-size: 0.7vw;
-  background-color: rgba( 69,145, 61, 0.7);
-  margin-bottom: 50px;
-  font-family: 'Didact Gothic', sans-serif;
-  font-weight: bolder;
-}
-
-.one {
-  position: absolute;
-  width: 20%;
-  left: 8%;
-  top: 15px;
-}
-
-.two {
-  position: absolute;
-  width: 20%;
-  left: 39%;
-  top: 15px;
-
-}
-
-.three {
-  position: relative;
-  width: 20%;
-  left: 70%;
-  top: 15px;
-
-}
-
-.list-items {
-  margin-bottom: 5px;
-}
-
-
-
 
 /*Progress Bar styling*/
 .progressbar {

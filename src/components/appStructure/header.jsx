@@ -1,6 +1,7 @@
 import React, {Component, Proptypes} from "react";
 import { Link } from 'react-router';
 
+//TODO:  fix this, remove use of setState
 class Header extends Component {
     constructor(props) {
       super(props);
