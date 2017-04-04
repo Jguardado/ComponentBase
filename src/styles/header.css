@@ -9,6 +9,7 @@
   color: black;
   margin-left: 10px;
   font-size: 24px;
+  text-align: center;
 }
 
 .nav-links {
@@ -26,6 +27,7 @@
   align-items: center;
 }
 
+
 .nav-button {
   flex: 1;
   width: 25%;
@@ -36,4 +38,21 @@
   margin-right: 10px;
   text-align: center;
 
+}
+
+@media screen and (max-width: 600px) {
+  .head {
+    flex-direction: column;
+  }
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-button {
+    width: 90%;
+    margin: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
 }

@@ -1,0 +1,40 @@
+/*Styling for the Jumbotron header*/
+.banner-logo {
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+  overflow: hidden;
+}
+
+.jumbotron {
+  margin-top: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b4e2b4+0,82ce82+17,50bc50+33,009600+67,006400+83,003200+100 */
+  background: #b4e2b4; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #b4e2b4 0%, #82ce82 17%, #50bc50 33%, #009600 67%, #006400 83%, #003200 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover,  #b4e2b4 0%,#82ce82 17%,#50bc50 33%,#009600 67%,#006400 83%,#003200 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center,  #b4e2b4 0%,#82ce82 17%,#50bc50 33%,#009600 67%,#006400 83%,#003200 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e2b4', endColorstr='#003200',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  height: 450px;
+}
+
+.jumobotext {
+  font-family: 'Berkshire Swash', cursive;
+  color: black;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  margin-left: 20px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  .jumobotext {
+    margin-bottom: 10px;
+  }
+}

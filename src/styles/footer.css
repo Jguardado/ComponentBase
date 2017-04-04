@@ -1,7 +1,21 @@
 /*Styling for the footer and headers*/
-.foot {
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   font-family: 'Didact Gothic', sans-serif;
   height: 65px;
   background: rgba( 43,119, 35,1);
   font-weight: bold;
+}
+
+.footer-item {
+  text-align: center;
+  flex: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+  }
 }

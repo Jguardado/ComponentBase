@@ -3,9 +3,9 @@ import React from 'react';
 const Footer = () => {
   return (
     <div className="footer">
-      <span className="item">Built by: Juan Guardado</span>
-      <span className='item'>Oakland, CA</span>
-      <span className='item'>Copyright(C) 2016</span>
+      <span className="footer-item">Built by: Juan Guardado</span>
+      <span className='footer-item'>Oakland, CA</span>
+      <span className='footer-item'>Copyright(C) 2016</span>
     </div>
   );
 };

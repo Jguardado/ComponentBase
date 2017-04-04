@@ -2,25 +2,21 @@
 .three-boxes {
   display: flex;
   justify-content: space-between;
-
-  @media (min-width: 450px) {
-    flex-direction: row;
-  }
 }
 
 .box-heading {
   font-weight: 800;
-  font-size: 15px;
+  font-size: 24px;
   text-align: center;
 }
 
 .newcomp {
   height: 200px;
   border-radius: 4px;
-  font-size: 0.8125rem;
+  font-size: 16px;
   background-color: rgba( 69,145, 61, 0.7);
   box-shadow: 3px -1px 3px 0px rgba(0,0,0,0.35);
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   font-family: 'Didact Gothic', sans-serif;
   font-weight: bolder;
   overflow-x: hidden;
@@ -45,4 +41,25 @@
 .list-items {
   text-align: center;
   padding-left: 0px;
+}
+
+@media screen and (max-width: 600px) {
+  .three-boxes{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .one {
+    margin: 0
+  }
+
+  .two {
+    margin: 0
+  }
+
+  .newcomp {
+    margin-bottom: 10px;
+    width: 90%;
+
+  }
 }
