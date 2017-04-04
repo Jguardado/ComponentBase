@@ -37,7 +37,11 @@
   background-color: #d2e0c9;
   margin-right: 10px;
   text-align: center;
+}
 
+.nav-link {
+  text-align: center;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 600px) {

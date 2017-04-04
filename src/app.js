@@ -18,7 +18,7 @@ import Picture from './components/examples/exampleImg';
 import Dropdown from './components/examples/exampleDropdown';
 import ProgressBar from './components/examples/exampleProgressBar';
 // import Routes from './routes';
-import { Container } from './components/appStructure/container';
+import Container from './components/appStructure/container';
 import store from "./root.reducer";
 
 console.log(" this is store: ", store);

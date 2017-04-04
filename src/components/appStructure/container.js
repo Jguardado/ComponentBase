@@ -1,7 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from './header.jsx';
 
-export const Container = (props) => <div>
-  <Header />
-  {props.children}
-</div>;
+const Container = (props) => (
+  <div>
+    <Header />
+    {props.children}
+  </div>
+);
+
+export default Container
