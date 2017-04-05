@@ -1,7 +1,8 @@
 import React from 'react';
 import Banner from './Banner';
 import Intro from './Intro';
-// import Header from '../examples/exampleRouters';
+import Header from './header';
+console.log("Header: ", Header);
 import AdditionalInfo from "./additionalInfo/additionalInfo"
 import Footer from './Footer';
 
@@ -12,6 +13,7 @@ console.log("additionalInfo: ", AdditionalInfo);
 const Layout = () => {
   return (
     <div>
+      <Header />
       <Banner />
       <Intro />
       <AdditionalInfo />

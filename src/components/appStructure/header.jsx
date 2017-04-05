@@ -33,7 +33,7 @@ class Header extends Component {
           <div className="nav-links">
             <div className="nav-bar">
               <div className="nav-button">
-                <Link to='/' className='nav-link'>Home</Link>
+                <div to='/' className='nav-link'>Home</div>
               </div>
               <div className="nav-button">
                 <a className='nav-link' href='https://github.com/Jguardado'>GitHub</a>
@@ -42,7 +42,7 @@ class Header extends Component {
                 <a className='nav-link' href='https://medium.com/@juanguardado'>Blog</a>
               </div>
               <div className="nav-button">
-                <Link to='/components' className='nav-link'>Components</Link>
+                <div to='/components' className='nav-link'>Components</div>
               </div>
             </div>
           </div>

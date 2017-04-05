@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import createHistory from 'history/createBrowserHistory'
+import { Route } from 'react-router'
+import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
+
 import ComponentPage from './components/appStructure/componentPage';
 import Home from './components/appStructure/layout';
 import "./styles/appStructure.css"
@@ -18,34 +21,31 @@ import Picture from './components/examples/exampleImg';
 import Dropdown from './components/examples/exampleDropdown';
 import ProgressBar from './components/examples/exampleProgressBar';
 // import Routes from './routes';
-import Container from './components/appStructure/container';
-import store from "./root.reducer";
+import { Container } from './components/appStructure/container';
+import store from "./store";
 
+const history = createHistory();
 console.log(" this is store: ", store);
-
 
 const NotFound = () => (
   <h1>404.. This page is not found!</h1>);
 
 //TODO: This needs to be abstacted and moved into a routes folder/page
-export default class App extends Component {
-
-  render() {
+ const App = () => {
     return (
       <Provider store={store}>
-        <Router history={hashHistory}>
-          <Route path="/" component={Container}>
-            <IndexRoute component={Home} />
-              <Route path="components" component={ComponentPage}>
-                <Route path="progress_bar" component={ProgressBar}/>
-              </Route>
-            <Route path="*" component={NotFound} />
-          </Route>
-        </Router>
+        <ConnectedRouter history={history}>
+          <div>
+            <Route exact path="/" component={Home}/>
+            <Route path="/components" component={ComponentPage}/>
+          </div>
+        </ConnectedRouter>
       </Provider>
     );
-  }
 };
+
+export default App;
+
 
 //TODO: current implementation is only taking advantage of the Link component
 // for navigation purposes. I need to determine why nested routes are not being
