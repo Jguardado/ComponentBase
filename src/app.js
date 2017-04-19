@@ -1,31 +1,29 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import createHistory from 'history/createBrowserHistory'
-import { Route } from 'react-router'
-import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
-
+// import createHistory from 'history/createBrowserHistory'
+import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router'
 import ComponentPage from './components/appStructure/componentPage';
 import Home from './components/appStructure/layout';
+import Footer from './components/appStructure/footer';
 import "./styles/appStructure.css"
 
 //Nested routes
-import HideShow from './components/examples/exampleHideShow';
-import Contructor from './components/examples/constructorFunc';
-import Buttons from './components/examples/exampleButton';
-import InputForm from './components/examples/exampleInputForm';
-import InputOnClick from './components/examples/exampleInputOnClick';
-import Textbox from './components/examples/exampleTextbox';
-import SliderBar from './components/examples/exampleSliderbar';
-import NavBar from './components/examples/exampleNavBar';
-import Picture from './components/examples/exampleImg';
-import Dropdown from './components/examples/exampleDropdown';
-import ProgressBar from './components/examples/exampleProgressBar';
+// import HideShow from './components/examples/exampleHideShow';
+// import Contructor from './components/examples/constructorFunc';
+// import Buttons from './components/examples/exampleButton';
+// import InputForm from './components/examples/exampleInputForm';
+// import InputOnClick from './components/examples/exampleInputOnClick';
+// import Textbox from './components/examples/exampleTextbox';
+// import SliderBar from './components/examples/exampleSliderbar';
+// import NavBar from './components/examples/exampleNavBar';
+// import Picture from './components/examples/exampleImg';
+// import Dropdown from './components/examples/exampleDropdown';
+// import ProgressBar from './components/examples/exampleProgressBar';
 // import Routes from './routes';
 import { Container } from './components/appStructure/container';
 import store from "./store";
 
-const history = createHistory();
-console.log(" this is store: ", store);
+console.log(" this is store: ", store.getState());
 
 const NotFound = () => (
   <h1>404.. This page is not found!</h1>);
@@ -34,18 +32,24 @@ const NotFound = () => (
  const App = () => {
     return (
       <Provider store={store}>
-        <ConnectedRouter history={history}>
-          <div>
-            <Route exact path="/" component={Home}/>
-            <Route path="/components" component={ComponentPage}/>
-          </div>
-        </ConnectedRouter>
+        <Router history={hashHistory}>
+          <Route path="/" component={Container}>
+            <IndexRoute component={Home} />
+              <Route path="components" component={ComponentPage} />
+            <Route path="*" component={NotFound} />
+          </Route>
+        </Router>
       </Provider>
     );
 };
 
 export default App;
 
+// <Provider store={store}>
+//   <Router history={history}>
+//     <Route pattern="/" component={Home}/>
+//   </Router>
+// </Provider>
 
 //TODO: current implementation is only taking advantage of the Link component
 // for navigation purposes. I need to determine why nested routes are not being
