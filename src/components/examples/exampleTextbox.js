@@ -50,7 +50,7 @@ export default class Textbox extends Component {
             </textarea>
             <button
             type="submit"
-            className='btn btn-success blocked'
+            className='button-style blocked'
             onClick={this.handleSubmit.bind(this)}>Submit</button>
           </fieldset>
         </form>

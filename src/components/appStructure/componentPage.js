@@ -13,7 +13,7 @@ import NavBar from '../examples/exampleNavBar';
 import Picture from '../examples/exampleImg';
 import Dropdown from '../examples/exampleDropdown';
 import Info from '../../containers/appStructure/info';
-import Header from '../examples/exampleRouters';
+import Header from './header';
 import Footer from './footer';
 import ProgressBar from '../examples/exampleProgressBar';
 import SelectedComponent from '../../containers/appStructure/selectedComponent';

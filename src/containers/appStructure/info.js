@@ -25,7 +25,7 @@ class Info extends Component {
         <div>
           <button
             onClick={this.makeSelect}
-            className="btn btn-primary">Select</button>
+            className="button-style">Select</button>
           <h4><a className='gitLink' href={this.props.github}>Get the Code</a></h4>
         </div>
       </div>

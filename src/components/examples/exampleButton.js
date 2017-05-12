@@ -5,9 +5,9 @@ export default class Buttons extends Component {
   render() {
     return (
       <div className='center'>
-      <legend className='headingtext'>Example Button</legend>
+      <div className='headingtext'>Example Button</div>
         <button
-        className='btn btn-success'
+        className='button-style'
         onClick={ function () {
           console.log('Hey! who said press that button?');
         }}>Name of button here</button>

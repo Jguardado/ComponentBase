@@ -59,7 +59,7 @@ class SelectComponent extends Component {
           <span className="">
             <Link to='/components'>
               <button
-                className="btn btn-primary leftCorner"
+                className="button-style leftCorner"
                 onClick={this.unSelect}>
                 Return to Main
               </button>

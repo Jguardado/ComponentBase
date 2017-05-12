@@ -44,10 +44,10 @@ class ProgressBar extends Component {
 
     return (
       <div className="center">
-        <legend>Progress bar</legend>
+        <div>Progress bar</div>
         <div className="progressbar" style={style}>{this.state.completed}</div>
-        <button className='btn btn-success inline' onClick={this.increaseBar}>Start</button>
-        <button className='btn btn-success inline' onClick={this.reset.bind(this)}>Reset bar</button>
+        <button className='button-style' onClick={this.increaseBar}>Start</button>
+        <button className='button-style' onClick={this.reset.bind(this)}>Reset bar</button>
       </div>
     );
   }

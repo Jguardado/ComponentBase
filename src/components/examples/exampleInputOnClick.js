@@ -40,7 +40,7 @@ export default class InputOnClick extends Component {
             placeholder='type somethin special'
             ></input>
             <button
-            className='btn btn-success'
+            className='button-style'
             onClick={ this.handleInputSubmit.bind(this) }
             >Click</button>
           </fieldset>

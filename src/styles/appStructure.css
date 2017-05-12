@@ -1,8 +1,9 @@
 @import "./additionalInfo";
 @import "./footer";
 @import "./header";
-@import "./banner.css";
+@import "./banner";
 @import "./intro";
+@import "./button";
 
 /*Progress Bar styling*/
 .progressbar {
